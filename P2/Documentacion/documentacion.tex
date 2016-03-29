@@ -84,6 +84,7 @@
 
 \renewcommand{\figurename}{Figura}
 \renewcommand{\contentsname}{Índice}
+\renewcommand{\tablename}{Tabla}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -153,17 +154,94 @@ Nuestra red social tiene los siguiente valores para las medidas de análisis:
 	\item \textbf{Grado Medio ($<k>$)}: 1.661
 	\item \textbf{Diámetro ($d_{max}$)}: 2
 	\item \textbf{Distancia Media ($<d>$)}: 1.013
-	\item \textbf{Distancia Media para la red aleatoria equivalente ($<d_{aleatoria}> = \frac{log(N)}{log(<k>)}$)}: 5.885
+	\item \textbf{Distancia Media para la red aleatoria equivalente ($<d_{aleatoria}> = \frac{log(N)}{log(<k>)}$)}: 14.73
 	\item \textbf{Coeficiente de Clustering Medio ($<C>$)}: 0.05
-	\item \textbf{Coeficiente de Clustering Medio para la red aleatoria equivalente ($<C_{aleatoria}> = \frac{<k>}{N} $)}: 0.002
+	\item \textbf{Coeficiente de Clustering Medio para la red aleatoria equivalente ($<C_{aleatoria}> = \frac{<k>}{N} $)}: 0.0009
 \end{itemize}
 
-El número de componentes conexas es de 929, mientras que 883 de los nodos no están conectados con ningún otro, ya que los usuario mencionan principalmente a Piqué (eliminado de la red) y a Iker Casillas, en general los usuarios no se mencionan entre si, salvo excepciones. La componente gigante de nuestra red es Iker Casillas (@casillasworld), ya que recibe la mayor parte de menciones de los usuarios. Tiene un grado de 434 (grado de entrada=434 ; grado de salida=0), por tanto 434 aristas de las 1464 totales son dirigidas a Casillas (un 29.64\%).
+El número de componentes conexas es de 929, mientras que 883 de los nodos no están conectados con ningún otro, ya que los usuario mencionan principalmente a Piqué (eliminado de la red) y a Iker Casillas. En general los usuarios no se mencionan entre si, salvo excepciones. La componente gigante de nuestra red es Iker Casillas (@casillasworld), ya que recibe la mayor parte de menciones de los usuarios. Tiene un grado de 434 (grado de entrada=434 ; grado de salida=0), por tanto 434 aristas de las 1464 totales son dirigidas a Casillas (un 29.64\%). Como vemos, Casillas es, principalmente, el centro de la red. Cosa que tiene sentido, pues es conocido y es el protagonista de la emisión junto a Piqué. Sin embargo, como veremos más adelante, hay otros usuarios importantes en nuestra red, que son mencionados por los espectadores a la hora de comentar el evento.
+\\\\
+Los nodos que hemos visto, cuyo grado es 0, no están conectados a ningún otro nodo de la red, pues mencionaban únicamente a Piqué (que ha sido eliminado de la red por ser el centro de la misma). Estos usuarios, no son de gran interés y en general son usuarios aislados que en algún momento han comentado la emisión. El resto de usuario que si están conectados a otros usuarios nos ayudarán a detectar comunidades y actores relevantes de nuestra red. En cuanto a la detección de comunidades, veremos más adelante exactamente que nos cuentan, pero a priori las comunidades de nuestra red deberían representar conversaciones entre diferentes usuarios sobre el evento.
 
 
 \subsection{Propiedades de la red}
 
+\subsubsection{Distribuciones de Grados}
+
+En las figuras \ref{dist:gradosentrada} y \ref{dist:gradossalida} podemos ver las distribuciones de grados de entrada y salida respectivamente, mientras que en la figura \ref{dist:grados} podemos ver la distribución global de grados.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=249px]{img/grados/indegree-distribution.png}
+	\caption{Distribución de grados de entrada\label{dist:gradosentrada}}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=249px]{img/grados/outdegree-distribution.png}
+	\caption{Distribución de grados de salida\label{dist:gradossalida}}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=249px]{img/grados/degree-distribution.png}
+	\caption{Distribución de grados\label{dist:grados}}
+\end{figure}
+
+A partir de estas distribuciones de probabilidad de los grados de entrada y salida de los nodos de nuestra red social, podemos determinar que nuestra red es libre de escala, y por tanto, que sigue la \textbf{Ley de la Potencia}. Las gráficas nos muestran una distribución de larga estela, como ya se ha mencionado en teoría, por ello, \textbf{podemos deducir que la red es libre de escala}.
+
+
+\subsubsection{Distribuciones de Distancias}
+
+% TODO: Representar la distribucion de distancias medias como se ve en la p43 del tema 1.1 (?)
+
+En nuestra red pequeña, nos encontramos ante un caso de \textit{mundo ultra-pequeño}, ya que como vimos anteriormente la distancia media ($<d>$) tenía un valor de 1.01, mientras que la distancia media para una red aleatoria equivalente era de 14.73. Para un mundo ultra-pequeño, la distancia media debe ser aún menor que $\frac{log(N)}{log(log(N))}$, que en este caso obtiene un valor de 3.715, por lo que la distancia media de nuestra red tiene un valor más bajo incluso que la distancia media para un mundo ultra-pequeño. Por tanto, podemos concluir que \textbf{nuestra red social es un mundo ultra-pequeño}.
+
+\subsubsection{Coeficiente de Clustering}
+
+% TODO: representar (?) y ver si: se comporta como una red regular (coeficiente de clustering constante con respecto al tamaño de la red), aleatoria (en torno a <k>/N) o libre de grado (coeficiente de clustering constante con respecto al tamaño de la red)
+
+El coeficiente de Clustering nos permite conocer la densidad local de la red, o dicho en otras palabras, la proporción de los vecinos de cada nodo que están conectados. En nuestra red, el coeficiente de clustering medio es de 0.05. Tenemos un coeficiente de clustering muy bajo, cosa que es lógica si nos fijamos en la gran cantidad de nodos que no están conectados con ningún otro nodo de la red. Como ya vimos antes, al eliminar a Piqué de la red, gran cantidad de nodos quedan totalmente desconectado y no tienen ninguna arista que los una a otros.
+
 \subsection{Calculo de los valores de las medidas de análisis de redes sociales}
+
+Ya hemos visto el valor medio de los grados, ahora vamos a ver para cada usuario el grado concreto y a tratar de analizar, a partir de esta y otras de las medidas de centralidad, cuales son los usuarios más importantes de nuestra red social. Para empezar, vamos a analizar los actores más interesantes de nuestra red en base al grado. Al trabajar con una red dirigida, trabajaremos con dos grados, el de entrada (que nos indica el prestigio de un usuario a la hora de ser citado/mencionado) y el de salida (que nos indica el alcance de la influencia de un usuario). En nuestro problema, nos interesa más el grado de entrada, pues nos indica los usuarios que han sido más mencionados, y por tanto, los más conocidos y/o interesantes para el resto de usuarios. Como no podría ser de otra manera, el usuario más mencionado (con mayor grado de entrada) es Iker Casillas. Esto ya lo habíamos visto antes, y como decíamos, es lógico al ser el protagonista de la emisión. Veamos que otros usuarios son también mencionados de forma frecuente.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{l l l}
+\hline
+Usuario & Grado Entrada & Grado Salida \\
+\hline \hline
+
+casillasworld & 434 & 0 \\ \hline
+as\_tomasroncero & 177 & 0 \\ \hline
+elchirincirco & 144 & 0  \\ \hline
+jpedrerol & 143 & 0 \\ \hline
+elsimiolopez & 123 & 1 \\ \hline
+juanmacastano & 30 & 0	 \\ \hline
+hoyendeportes4 & 28 & 0 \\ \hline
+barcastuff & 23 & 0 \\ \hline
+chuycorona25 & 20 & 0	 \\ \hline
+miguel\_layun & 20 & 0 \\ \hline
+mundodeportivo & 18 & 1	 \\ \hline
+abc\_deportes & 17 & 0	 \\ \hline
+eukarolyi & 15 & 3 \\ \hline
+miseleccionmx & 14 & 0	 \\ \hline
+txikiforero & 13 & 0 \\ \hline
+sefutbol & 12 & 0 \\ \hline
+sergioramos & 10 & 0	 \\ \hline
+sientelaroja & 10 & 0	 \\ \hline
+jordialba & 9 & 0 \\ \hline
+marcbartra & 9 & 0 \\ \hline
+
+\end{tabular}
+\caption{Usuarios ordenados por grado de entrada}
+\label{tabla:gradoentrada}
+\end{center}
+\end{table}
+
+En la tabla \ref{tabla:gradoentrada} podemos ver la lista de usuarios más mencionados. Como podemos ver, a parte de Casillas, el usuario más importante de nuestra red es Tomás Roncero (@as\_tomasroncero), seguido por @elchirincirco y @jpedrerol. Estos resultados me parecen interesantes y curiosos, pues muestran algunos detalles interesantes en nuestro problema. Es curioso que los usuarios más mencionados, y por tanto más importantes de nuestra red desde el punto de vista del grado de entrada, no sean jugadores de fútbol que se encontrasen convocados con la selección española, ya que en el momento de la emisión los jugadores estaban convocados y concentrados en el hotel para afrontar un serie de partidos amistosos. De hecho, me resulta curioso que haya usuarios mas mencionados que Cesc Fabregas, que aparecía junto a Piqué y Casillas en la emisión (aunque con mucho menos protagonismo). Pero de estas curiosidades que no muestra la red, hablaremos más tarde en la sección dedicada a conclusiones.
 
 \subsection{Descubrimiento de comunidades}
 
