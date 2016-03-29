@@ -145,17 +145,21 @@ De cara a evaluar la red correctamente, se ha decidido eliminar el nodo de Piqué
 Para el análisis de la red se ha utilizado la herramienta \textbf{Gephi}.
 \\
 Nuestra red social tiene los siguiente valores para las medidas de análisis:
+% TODO: Actualizar medidas !!!!
 \begin{itemize}
 	\item \textbf{Número de Nodos (N)}: 1763
 	\item \textbf{Número de Enlaces (L)}: 1464
 	\item \textbf{Densidad (D)}: 0.001
-	\item \textbf{Grado Medio ($<k>$)}: 3.561
+	\item \textbf{Grado Medio ($<k>$)}: 1.661
 	\item \textbf{Diámetro ($d_{max}$)}: 2
 	\item \textbf{Distancia Media ($<d>$)}: 1.013
-	\item \textbf{Distancia Media para la red aleatoria equivalente ($<d_{aleatoria}>$)}: 
+	\item \textbf{Distancia Media para la red aleatoria equivalente ($<d_{aleatoria}> = \frac{log(N)}{log(<k>)}$)}: 5.885
 	\item \textbf{Coeficiente de Clustering Medio ($<C>$)}: 0.05
-	\item \textbf{Coeficiente de Clustering Medio para la red aleatoria equivalente ($<C_{aleatoria}>$)}: 
+	\item \textbf{Coeficiente de Clustering Medio para la red aleatoria equivalente ($<C_{aleatoria}> = \frac{<k>}{N} $)}: 0.002
 \end{itemize}
+
+El número de componentes conexas es de 929, mientras que 883 de los nodos no están conectados con ningún otro, ya que los usuario mencionan principalmente a Piqué (eliminado de la red) y a Iker Casillas, en general los usuarios no se mencionan entre si, salvo excepciones. La componente gigante de nuestra red es Iker Casillas (@casillasworld), ya que recibe la mayor parte de menciones de los usuarios. Tiene un grado de 434 (grado de entrada=434 ; grado de salida=0), por tanto 434 aristas de las 1464 totales son dirigidas a Casillas (un 29.64\%).
+
 
 \subsection{Propiedades de la red}
 
