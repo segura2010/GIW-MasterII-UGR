@@ -7,6 +7,12 @@
 \BOOKMARK [3][-]{subsubsection.2.3.2}{Distribuciones de Distancias}{subsection.2.3}% 7
 \BOOKMARK [3][-]{subsubsection.2.3.3}{Coeficiente de Clustering}{subsection.2.3}% 8
 \BOOKMARK [2][-]{subsection.2.4}{Calculo de los valores de las medidas de an\341lisis de redes sociales}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.5}{Descubrimiento de comunidades}{section.2}% 10
-\BOOKMARK [2][-]{subsection.2.6}{Visualizaci\363n de la red social}{section.2}% 11
-\BOOKMARK [2][-]{subsection.2.7}{Discusi\363n de los resultados y Conclusiones}{section.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Grado}{subsection.2.4}% 10
+\BOOKMARK [3][-]{subsubsection.2.4.2}{Cercan\355a}{subsection.2.4}% 11
+\BOOKMARK [3][-]{subsubsection.2.4.3}{Intermediaci\363n}{subsection.2.4}% 12
+\BOOKMARK [3][-]{subsubsection.2.4.4}{Vector Propio}{subsection.2.4}% 13
+\BOOKMARK [3][-]{subsubsection.2.4.5}{PageRank}{subsection.2.4}% 14
+\BOOKMARK [3][-]{subsubsection.2.4.6}{Medidas m\341s interesantes}{subsection.2.4}% 15
+\BOOKMARK [2][-]{subsection.2.5}{Descubrimiento de comunidades}{section.2}% 16
+\BOOKMARK [2][-]{subsection.2.6}{Visualizaci\363n de la red social}{section.2}% 17
+\BOOKMARK [2][-]{subsection.2.7}{Discusi\363n de los resultados y Conclusiones}{section.2}% 18

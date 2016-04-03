@@ -7,6 +7,12 @@
 \contentsline {subsubsection}{\numberline {2.3.2}Distribuciones de Distancias}{5}{subsubsection.2.3.2}
 \contentsline {subsubsection}{\numberline {2.3.3}Coeficiente de Clustering}{5}{subsubsection.2.3.3}
 \contentsline {subsection}{\numberline {2.4}Calculo de los valores de las medidas de an\'alisis de redes sociales}{6}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Descubrimiento de comunidades}{7}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Visualizaci\'on de la red social}{7}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Discusi\'on de los resultados y Conclusiones}{7}{subsection.2.7}
+\contentsline {subsubsection}{\numberline {2.4.1}Grado}{6}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Cercan\IeC {\'\i }a}{7}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Intermediaci\'on}{8}{subsubsection.2.4.3}
+\contentsline {subsubsection}{\numberline {2.4.4}Vector Propio}{9}{subsubsection.2.4.4}
+\contentsline {subsubsection}{\numberline {2.4.5}PageRank}{9}{subsubsection.2.4.5}
+\contentsline {subsubsection}{\numberline {2.4.6}Medidas m\'as interesantes}{11}{subsubsection.2.4.6}
+\contentsline {subsection}{\numberline {2.5}Descubrimiento de comunidades}{11}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Visualizaci\'on de la red social}{11}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Discusi\'on de los resultados y Conclusiones}{11}{subsection.2.7}

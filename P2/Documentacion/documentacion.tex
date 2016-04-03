@@ -207,6 +207,8 @@ El coeficiente de Clustering nos permite conocer la densidad local de la red, o 
 
 Ya hemos visto el valor medio de los grados, ahora vamos a ver para cada usuario el grado concreto y a tratar de analizar, a partir de esta y otras de las medidas de centralidad, cuales son los usuarios más importantes de nuestra red social. Para empezar, vamos a analizar los actores más interesantes de nuestra red en base al grado. Al trabajar con una red dirigida, trabajaremos con dos grados, el de entrada (que nos indica el prestigio de un usuario a la hora de ser citado/mencionado) y el de salida (que nos indica el alcance de la influencia de un usuario). En nuestro problema, nos interesa más el grado de entrada, pues nos indica los usuarios que han sido más mencionados, y por tanto, los más conocidos y/o interesantes para el resto de usuarios. Como no podría ser de otra manera, el usuario más mencionado (con mayor grado de entrada) es Iker Casillas. Esto ya lo habíamos visto antes, y como decíamos, es lógico al ser el protagonista de la emisión. Veamos que otros usuarios son también mencionados de forma frecuente.
 
+\subsubsection{Grado}
+
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{l l l}
@@ -241,7 +243,127 @@ marcbartra & 9 & 0 \\ \hline
 \end{center}
 \end{table}
 
-En la tabla \ref{tabla:gradoentrada} podemos ver la lista de usuarios más mencionados. Como podemos ver, a parte de Casillas, el usuario más importante de nuestra red es Tomás Roncero (@as\_tomasroncero), seguido por @elchirincirco y @jpedrerol. Estos resultados me parecen interesantes y curiosos, pues muestran algunos detalles interesantes en nuestro problema. Es curioso que los usuarios más mencionados, y por tanto más importantes de nuestra red desde el punto de vista del grado de entrada, no sean jugadores de fútbol que se encontrasen convocados con la selección española, ya que en el momento de la emisión los jugadores estaban convocados y concentrados en el hotel para afrontar un serie de partidos amistosos. De hecho, me resulta curioso que haya usuarios mas mencionados que Cesc Fabregas, que aparecía junto a Piqué y Casillas en la emisión (aunque con mucho menos protagonismo). Pero de estas curiosidades que no muestra la red, hablaremos más tarde en la sección dedicada a conclusiones.
+En la tabla \ref{tabla:gradoentrada} podemos ver la lista de usuarios más mencionados. Como podemos ver, a parte de Casillas, el usuario más importante de nuestra red es Tomás Roncero (@as\_tomasroncero), seguido por @elchirincirco y @jpedrerol. Estos resultados me parecen interesantes y curiosos, pues muestran algunos detalles interesantes en nuestro problema. Es curioso que los usuarios más mencionados, y por tanto más importantes de nuestra red desde el punto de vista del grado de entrada, no sean jugadores de fútbol que se encontrasen convocados con la selección española, ya que en el momento de la emisión los jugadores estaban convocados y concentrados en el hotel para afrontar un serie de partidos amistosos. De hecho, me resulta curioso que haya usuarios mas mencionados que Cesc Fabregas, que aparecía junto a Piqué y Casillas en la emisión (aunque con mucho menos protagonismo). Pero de estas curiosidades que nos muestra la red, hablaremos más tarde en la sección dedicada a conclusiones.
+
+
+\subsubsection{Cercanía}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=249px]{img/centralidad/centralidad_grado.pdf}
+	\caption{Visualización de la parte central de la red. El color de los nodos indica, de menos rojo a más rojo, el valor de la medida de centralidad, de menor a mayor respectivamente. El tamaño de los nodos representa el grado\label{red:centralidad}}
+\end{figure}
+
+En la figura \ref{red:centralidad} podemos ver como queda la visualización de la parte central de la red, en la que el color de los nodos nos indica el valor de la medida de centralidad (Harmonic Closeness Centrality en Gephi). Si nos fijamos, esta medida no nos da demasiada información en nuestra red, ya que al estar gran parte de los nodos conectados a 'hubs', casi todos los nodos (usuarios) son importantes desde el punto de vista de esta medida. Como sabemos, el planteamiento de esta medida es diferente a la de intermediación (que veremos a continuación) y al grado, la centralidad trata de evaluar la cercanía de un nodo al centro de la red, a otros nodos centrales, a los hubs. Y como hemos visto en la imagen de nuestra red de la práctica, se puede ver facilmente esto, como los nodos cercanos y conectados a los nodos centrales de la red obtienen un valor mayor de centralidad que el resto. Y por como es nuestra red, en la que muchos están conectados directamente a los hubs (Casillas, Roncero, ...), muchos de los nodos tienen una centralidad cuyo valor es 1. En la figura \ref{red:centralidad} no se ha incluido toda la red, sino una parte central para que se vea bien la medida de centralidad. Sin embargo, hay mucho nodos que han quedado totalmente desconectados al eliminar a Piqué de la red, como ya se ha comentado anteriormente. Con lo cual, estos nodos tienen un valor de centralidad igual a 0, cosa que, con lo que sabemos, es lógico. Por tanto, está medida, al igual que el grado, nos permite ver cuales son los hubs, con respecto a lo centrales que son. Y al igual que el grado, los nodos centrales (con un valor menor de centralidad, pero que permiten que los que se conecta a ellos tengan un valor alto), son prácticamente los mismo que veíamos según el grado.
+
+
+
+\subsubsection{Intermediación}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{l l}
+\hline
+Usuario & Intermediación \\
+\hline \hline
+
+eukarolyi & 6 \\ \hline
+pepvergeli & 6 \\ \hline
+jorditenerife95 & 3 \\ \hline
+franarteaga & 2 \\ \hline
+culealcalaino & 1 \\ \hline
+damosasa & 1 \\ \hline
+real\_oscarinn & 1 \\ \hline
+
+\end{tabular}
+\caption{Usuarios ordenados por Intermediación}
+\label{tabla:intermediacion}
+\end{center}
+\end{table}
+
+Como vemos en la tabla \ref{tabla:intermediacion}, tenemos usuarios menos conocidos que son los que obtienen los mejores valores para la medida de intermediación. Como sabemos, la medida de intermediación trata de reflejar en que medida un nodo se encuentra en el centro, en la zona intermedia entre diferentes conjuntos de nodos, de forma que la única forma de que la información fluya de un grupo a otro sea a través de él, permitiéndole controlar los que pasa de un lado a otro. Estos nodos conectan grupos de nodos de forma que pueden controlar la información que se intercambia entre los grupos, por ello, desde el punto de vista de esta medida, estos son los usuarios más importantes.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=180px]{img/intermediacion/intermediacion_1.pdf}
+	\caption{Visualización de la parte de la red unida por el nodo con mayor intermediación. El color de los nodos indica, de menos rojo a más rojo, el valor de la medida de intermediación, de menor a mayor respectivamente. El tamaño de los nodos representa el grado\label{red:intermediacion_1}}
+\end{figure}
+
+En la figura \ref{red:intermediacion_1} podemos ver lo que hemos visto anteriormente. El usuario eukarolyi, es el encargado de conectar los nodos de ese grupo (a simple vista esta es una especie de comunidad cuyo centro y el que une a todos los nodos es este usuario, veremos más tarde que nos dice el algoritmo de comunidades de Lovaina).
+
+
+\subsubsection{Vector Propio}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{l l}
+\hline
+Usuario & Vector Propio \\
+\hline \hline
+
+casillasworld & 1 \\ \hline
+as\_tomasroncero & 0.467376 \\ \hline
+elchirincirco & 0.327179 \\ \hline
+jpedrerol & 0.32491 \\ \hline
+elsimiolopez & 0.279027 \\ \hline
+juanmacastano & 0.068055 \\ \hline
+hoyendeportes4 & 0.063518 \\ \hline
+
+\end{tabular}
+\caption{Usuarios ordenados por Vector Propio}
+\label{tabla:vector_propio}
+\end{center}
+\end{table}
+
+La centralidad de Vector Propio es una versión más elaborada de la centralidad de grado, por ello, los resultados son prácticamente iguales, y como podemos ver en la tabla \ref{tabla:vector_propio}, los usuarios más importantes de nuestra red desde el punto de vista de esta medida, son los mismos que nos indicaba la centralidad de grado. De hecho, si nos fijamos en la figura \ref{red:vector_propio}, podemos ver como también los colores de los nodos y el tamaño (vector propio y grado) coinciden al representar a los nodos más importantes.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=250px]{img/vector_propio/vector_propio.pdf}
+	\caption{Visualización de la parte central de la red. El color de los nodos indica, de menos rojo a más rojo, el valor de la medida de Vector Propio, de menor a mayor respectivamente. El tamaño de los nodos representa el grado\label{red:vector_propio}}
+\end{figure}
+
+
+\subsubsection{PageRank}
+
+El PageRank es una forma diferente de calcular el vector propio, basandose en colocarse de forma aleatoria en un nodo e ir recorriendo recursivamente los enlaces de un nodo a otro, y contabilizando cuantas veces llegamos a los nodos a través de otros. De esta forma se reajusta el PageRank para cada nodo en función de las veces que llegamos a él a través de otros y el peso que tengan en ese momento los nodos que conectan con él. Personalmente es de las medidas que más me gusta, ya que su planteamiento me parece muy interesante. En nuestro problema, los actores más importantes siguen siendo los casi los mismos que nos encontrabamos con el grado y con el vector propio de las subsecciones anteriores, ya que nuestro problema es muy concreto y esta muy claro quienes son los actores importantes.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{l l}
+\hline
+Usuario & PageRank \\
+\hline \hline
+
+casillasworld & 0.095674 \\ \hline
+as\_tomasroncero & 0.054631 \\ \hline
+elsimiolopez & 0.020393 \\ \hline
+jpedrerol & 0.016179 \\ \hline
+elchirincirco & 0.016122 \\ \hline
+hoyendeportes4 & 0.008424 \\ \hline
+abc\_deportes & 0.006155 \\ \hline
+juanmacastano & 0.005478 \\ \hline
+
+\end{tabular}
+\caption{Usuarios ordenados por PageRank}
+\label{tabla:pagerank}
+\end{center}
+\end{table}
+
+Con el PageRank, como podemos ver en la tabla \ref{tabla:pagerank}, aparecen usuarios que estaban posicionados peor según otras medidas. Por ejemplo, \textit{@elsimiolopez} es más importante según el PageRank, de lo que lo era según el grado o según el vector propio. Aunque básicamente, todos los usuarios destacados por el PageRank, también eran importantes (algo más o algo menos) según el resto de medidas.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=250px]{img/vector_propio/pagerank.pdf}
+	\caption{Visualización de la parte central de la red. El color de los nodos indica, de menos rojo a más rojo, el valor de la medida de PageRank, de menor a mayor respectivamente. El tamaño de los nodos representa el grado\label{red:pagerank}}
+\end{figure}
+
+En la figura \ref{red:pagerank} podemos ver una representación en la que los nodos representan el PageRank. Como vemos, es muy parecida a la visualización que obteníamos con el grado y con el vector propio.
+
+
+\subsubsection{Medidas más interesantes}
+
+En esta sección hemos estudiado las medidas de centralidad en nuestra red, pero no todas son igual de interesantes de cara a obtener información en nuestro problema concreto. Entre todas las medidas que hemos visto, bajo mi punto de vista y en vista de los resultados obtenidos por cada una de ellas de cara a responder la pregunta que nos hemos planteado, las más interesantes son PageRank, Vector Propio y grado. La intermediación puede ser interesante, pero para nuestro estudio no lo es, ya que solo nos permite descubrir usuario muy concretos que en pequeños grupos aparecen como intermediarios. Estos pequeños grupos no son de mucho interés en nuestro estudio. Tampoco es de gran interés la cercanía, aunque esta claro que de cara a utilizarla en la visualización para detectar los hubs/nodos centrales, puede ser interesante; aunque para ello ya tenemos las medidas que hemos dicho que si son interesante, como el PageRank o el vector propio.
 
 \subsection{Descubrimiento de comunidades}
 
