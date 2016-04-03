@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.4)  3 APR 2016 14:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.4)  3 APR 2016 21:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -707,23 +707,38 @@ l.367
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.367 
-       <./img/vector_propio/pagerank.pdf>] 
+       <./img/vector_propio/pagerank.pdf>]
+<img/comunidades/comunidades.pdf, id=222, 1226.98402pt x 1055.14195pt>
+File: img/comunidades/comunidades.pdf Graphic file (type pdf)
+
+<use img/comunidades/comunidades.pdf>
+Package pdftex.def Info: img/comunidades/comunidades.pdf used on input line 376
+.
+(pdftex.def)             Requested size: 250.93842pt x 215.7903pt.
+ 
 AED: lastpage setting LastPage
-[11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 374.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 374.
- (./documentacion.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 374.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 374.
+[11pdfTeX warning (ext4): destination with the same identifier (name{figure.8})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.386 \end{document}
+                     <./img/comunidades/comunidades.pdf>] [12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 386.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 386.
+
+(./documentacion.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 386.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 386.
 Package rerunfilecheck Info: File `documentacion.out' has not changed.
 (rerunfilecheck)             Checksum: 4A6A5DEBFB0E73F42DC4EE9D6E52D2DC;1423.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 374.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 386.
  ) 
 Here is how much of TeX's memory you used:
- 7746 strings out of 493089
- 114371 string characters out of 6134843
- 308323 words of memory out of 5000000
- 11083 multiletter control sequences out of 15000+600000
+ 7755 strings out of 493089
+ 114577 string characters out of 6134843
+ 308406 words of memory out of 5000000
+ 11088 multiletter control sequences out of 15000+600000
  9578 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,12n,43p,1827b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -740,10 +755,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on documentacion.pdf (11 pages, 1111142 bytes).
+Output written on documentacion.pdf (12 pages, 1353423 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
- 45 named destinations out of 1000 (max. 500000)
- 180 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 292 PDF objects out of 1000 (max. 8388607)
+ 247 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 185 words of extra memory for PDF output out of 10000 (max. 10000000)
 

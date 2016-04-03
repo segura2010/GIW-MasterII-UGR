@@ -363,9 +363,21 @@ En la figura \ref{red:pagerank} podemos ver una representación en la que los nod
 
 \subsubsection{Medidas más interesantes}
 
-En esta sección hemos estudiado las medidas de centralidad en nuestra red, pero no todas son igual de interesantes de cara a obtener información en nuestro problema concreto. Entre todas las medidas que hemos visto, bajo mi punto de vista y en vista de los resultados obtenidos por cada una de ellas de cara a responder la pregunta que nos hemos planteado, las más interesantes son PageRank, Vector Propio y grado. La intermediación puede ser interesante, pero para nuestro estudio no lo es, ya que solo nos permite descubrir usuario muy concretos que en pequeños grupos aparecen como intermediarios. Estos pequeños grupos no son de mucho interés en nuestro estudio. Tampoco es de gran interés la cercanía, aunque esta claro que de cara a utilizarla en la visualización para detectar los hubs/nodos centrales, puede ser interesante; aunque para ello ya tenemos las medidas que hemos dicho que si son interesante, como el PageRank o el vector propio.
+En esta sección hemos estudiado las medidas de centralidad en nuestra red, pero no todas son igual de interesantes de cara a obtener información en nuestro problema concreto. Entre todas las medidas que hemos visto, bajo mi punto de vista y en vista de los resultados obtenidos por cada una de ellas de cara a responder la pregunta que nos hemos planteado, las más interesantes son \textbf{PageRank, Vector Propio y grado}. La intermediación puede ser interesante, pero para nuestro estudio no lo es, ya que solo nos permite descubrir usuario muy concretos que en pequeños grupos aparecen como intermediarios. Estos pequeños grupos no son de mucho interés en nuestro estudio. Tampoco es de gran interés la cercanía, aunque esta claro que de cara a utilizarla en la visualización para detectar los hubs/nodos centrales, puede ser interesante; aunque para ello ya tenemos las medidas que hemos dicho que si son interesante, como el PageRank o el vector propio.
 
 \subsection{Descubrimiento de comunidades}
+
+A continuación, vamos a tratar de detectar comunidades en nuestra red. Anteriormente ya nos habíamos imaginado, a partir de la visualización de la red, que podrían existir algunas comunidades, y ahora es el momento de comprobarlo utilizando un algoritmo especifico para tal efecto. Debido a las limitaciones de la última versión de Gephi por las cuales no están disponibles todos los algoritmos de detección de comunidades, solamente se ha utilizado el algoritmo de Lovaina.
+
+En un primer intento, utilizando como valor para el parámetro de resolución 1.0, la separación en comunidades, desde el punto de vista de la medida de Modularidad, si hay comunidades, ya que se obtiene un valor Q=0,647. El problema es que, aunque ese valor es muy bueno, implica que se detecten 942 comunidades, que vienen principalmente de los nodos inconexos de nuestra red (a causa de eliminar a Piqué). Sin embargo, como podemos ver en la figura \ref{red:comunidades}, las comunidades que ha detectado parecen correctas y muy acertadas.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=250px]{img/comunidades/comunidades.pdf}
+	\caption{Comunidades de la red detectadas por el algoritmo de Lovaina\label{red:comunidades}}
+\end{figure}
+
+En la figura \ref{red:comunidades} podemos ver que las 942 comunidades, son realmente comunidades de nodos individuales inconexos.
 
 \subsection{Visualización de la red social}
 
