@@ -38,6 +38,8 @@
 
 \usepackage{float} % imagenes debajo de texto (http://tex.stackexchange.com/questions/85971/figure-goes-automatically-to-next-page)
 
+\usepackage{color} % texto de colores
+
 
 \usepackage[utf8]{inputenc} % Para tildes!
 
@@ -377,7 +379,51 @@ En un primer intento, utilizando como valor para el parámetro de resolución 1.0,
 	\caption{Comunidades de la red detectadas por el algoritmo de Lovaina\label{red:comunidades}}
 \end{figure}
 
-En la figura \ref{red:comunidades} podemos ver que las 942 comunidades, son realmente comunidades de nodos individuales inconexos.
+En la figura \ref{red:comunidades} podemos ver que las 942 comunidades, son realmente comunidades de nodos individuales inconexos. Realmente tenemos 8 comunidades importantes, como podemos ver en la figura \ref{red:comunidades_centro}, mientras que el resto son comunidades que ha detectado el algoritmo correspondientes a nodos aislados, y que no nos interesan.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=250px]{img/comunidades/comunidades_centro.pdf}
+	\caption{Comunidades interesantes de la red detectadas por el algoritmo de Lovaina\label{red:comunidades_centro}}
+\end{figure}
+
+De las 8 comunidades que si que son interesantes, podemos ver las siguientes:
+
+\begin{itemize}
+	\item {\color{Magenta} casillasworld}: Comunidad formada, principalmente, por los usuarios que han mencionado a Casillas. No todos los usuarios que han mencionado a Casillas forman parte de esta red, hay algunos otros que al haber mencionado en el mismo tweet a otros usuarios de otras comunidades han quedado asignados a esas otras comunidades (Ver figura \ref{red:comunidad_casillas}).
+	
+	\item {\color{LimeGreen} as\_tomasroncero y elsimiolopez}: Comunidad formada, principalmente, por los usuarios que han mencionado a Roncero y a elsimiolopez. Aparentemente buscando hacer comentarios graciosos sobre Roncero y mencionando a elsimiolopez, que es una cuenta de humor. Básicamente podríamos decir que vemos a los alumnos enseñándole lo aprendido a su profesor de humor, aunque con los tweets recogidos no les hace ningún caso.
+	
+	\item {\color{Cerulean} elchirincirco y jpedrerol}: Comunidad formada, principalmente, por los usuarios que han mencionado a elchirincirco y a jpedrerol. Esta comunidad refleja exactamente lo mismo que la anterior, usuarios mencionando a jpedrerol para hacer la gracia y que elchirincirco las lea y les retwitee. Esto es algo muy común en Twitter.
+	
+	\item {\color{Black} hoyendeportes4}: Comunidad formada, principalmente, por los usuarios que han mencionado a hoyendeportes4. La intención de estos usuarios parece ser avisar a la cuenta de Deportes Cuatro que Piqué está haciendo una emisión.
+	
+	\item {\color{ForestGreen} sefutbol y sergioramos}: Comunidad formada, principalmente, por los usuarios que han mencionado a sefutbol y a sergioramos (Ver figura \ref{red:comunidad_ramos}).
+	
+	\item {\color{Red} barcastuff}: Comunidad formada, principalmente, por los usuarios que han mencionado a barcastuff.
+	
+	\item {\color{Orange} miguel\_layun y chuycorona25}: Comunidad formada, principalmente, por los usuarios que han mencionado a miguel\_layun y a chuycorona25 (Ver figura \ref{red:comunidad_naranja}).
+	
+\end{itemize}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=200px]{img/comunidades/comunidad_casillas.pdf}
+	\caption{Comunidad Casillas\label{red:comunidad_casillas}}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=140px,height=260px]{img/comunidades/comunidad_ramos.pdf}
+	\caption{Comunidad sefutbol y sergioramos\label{red:comunidad_ramos}}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=140px,height=200px]{img/comunidades/comunidad_naranja.pdf}
+	\caption{Comunidad de miguel\_layun y chuycorona25 \label{red:comunidad_naranja}}
+\end{figure}
 
 \subsection{Visualización de la red social}
 

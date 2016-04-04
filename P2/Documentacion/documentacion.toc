@@ -14,5 +14,5 @@
 \contentsline {subsubsection}{\numberline {2.4.5}PageRank}{9}{subsubsection.2.4.5}
 \contentsline {subsubsection}{\numberline {2.4.6}Medidas m\'as interesantes}{11}{subsubsection.2.4.6}
 \contentsline {subsection}{\numberline {2.5}Descubrimiento de comunidades}{11}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Visualizaci\'on de la red social}{12}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Discusi\'on de los resultados y Conclusiones}{12}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.6}Visualizaci\'on de la red social}{14}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Discusi\'on de los resultados y Conclusiones}{14}{subsection.2.7}
