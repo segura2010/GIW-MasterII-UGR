@@ -203,7 +203,7 @@ En nuestra red pequeña, nos encontramos ante un caso de \textit{mundo ultra-pequ
 
 % TODO: representar (?) y ver si: se comporta como una red regular (coeficiente de clustering constante con respecto al tamaño de la red), aleatoria (en torno a <k>/N) o libre de grado (coeficiente de clustering constante con respecto al tamaño de la red)
 
-El coeficiente de Clustering nos permite conocer la densidad local de la red, o dicho en otras palabras, la proporción de los vecinos de cada nodo que están conectados. En nuestra red, el coeficiente de clustering medio es de 0.05. Tenemos un coeficiente de clustering muy bajo, cosa que es lógica si nos fijamos en la gran cantidad de nodos que no están conectados con ningún otro nodo de la red. Como ya vimos antes, al eliminar a Piqué de la red, gran cantidad de nodos quedan totalmente desconectado y no tienen ninguna arista que los una a otros.
+El coeficiente de Clustering nos permite conocer la densidad local de la red, o dicho en otras palabras, la proporción de los vecinos de cada nodo que están conectados. En nuestra red, el coeficiente de clustering medio es de 0.05. Tenemos un coeficiente de clustering muy bajo, cosa que es lógica si nos fijamos en la gran cantidad de nodos que no están conectados con ningún otro nodo de la red. Como ya vimos antes, al eliminar a Piqué de la red, gran cantidad de nodos quedan totalmente desconectados y no tienen ninguna arista que los una a otros.
 
 \subsection{Calculo de los valores de las medidas de análisis de redes sociales}
 
@@ -404,6 +404,8 @@ De las 8 comunidades que si que son interesantes, podemos ver las siguientes:
 	
 	\item {\color{Orange} miguel\_layun y chuycorona25}: Comunidad formada, principalmente, por los usuarios que han mencionado a miguel\_layun y a chuycorona25 (Ver figura \ref{red:comunidad_naranja}).
 	
+	\item {\color{Melon} \_pedro17\_, jordialba, marcbartra y sergiroberto}: Comunidad formada, principalmente, por los usuarios que han mencionado a \_pedro17\_, jordialba, marcbartra y sergiroberto (Ver figura \ref{red:comunidad_barcelona}).
+	
 \end{itemize}
 
 
@@ -425,8 +427,40 @@ De las 8 comunidades que si que son interesantes, podemos ver las siguientes:
 	\caption{Comunidad de miguel\_layun y chuycorona25 \label{red:comunidad_naranja}}
 \end{figure}
 
-\subsection{Visualización de la red social}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=200px,height=200px]{img/comunidades/comunidad_barcelona.pdf}
+	\caption{Comunidad de \_pedro17\_, jordialba, marcbartra y sergiroberto \label{red:comunidad_barcelona}}
+\end{figure}
 
-\subsection{Discusión de los resultados y Conclusiones}
+Como hemos visto, estas 8 son las comunidades principales detectadas por el algoritmo, las restantes corresponden a nodos aislados. Estas 8 comunidades tienen sentido, principalmente las comunidades de Casillas, Roncero y elsimiolopez, elchirincirco y jpedrerol, y la de hoyendeportes4. Estas son las principales comunidades y las más claras, como hemos podido ver más fácilmente en las figuras de la visualización de la red.
+\\\\
+Digamos que no son "comunidades reales" por así decirlo, ya que no se agrupan de forma real, pero si que bajo las menciones entre los usuarios que forman parte de ellas, se pueden ver fácilmente su agrupación. Y dicha agrupación tiene sentido y esta clara. Tenemos un grupo cuya característica principal es que mencionan a Casillas durante la emisión, otro grupo que menciona a elsimiolopez y a Roncero en un mismo tweet, lo que refleja que este grupo de usuarios lo que buscan es hacer una serie de chistes que involucran a Roncero y tratan de ser retwitteados por una cuenta de humor como la de @elsimiolopez. Igual ocurre con el grupo que centra sus chistes en Pedrerol y que busca la atención de la cuenta de humor @elchirincirco. Esto último tienen sentido, pues Pedrerol es el presentador del programa de televisión "El Chiringuito", y la cuenta @elchirincirco es una cuenta parodia de este programa. Por otro lado, tenemos un grupo de usuarios que parecen tratar de avisar a los encargados de la cuenta de los deportes de la cadena de televisión Cuatro (@hoyendeportes4). Y finalmente, el resto de comunidades son más pequeñas y menos importantes en nuestra red, pero representan grupos de personas con otros intereses. Por ejemplo, decir algo sobre Sergio Ramos o, como veíamos con la comunidad en torno a Deportes Cuatro, tratan de avisar a los encargados de @sefutbol, que es la cuenta de Twitter oficial de la Selección Española. También es curiosa la última comunidad que hemos visto que representa a un grupo de usuarios que menciona a varios jugadores de FC Barcelona (\_pedro17\_, jordialba, marcbartra y sergiroberto).
+
+\subsection{Visualización de la red}
+
+A lo largo de esta documentación, se ha hecho uso en varias ocasiones de las utilidades de visualización que ofrece Gephi, de forma que la información obtenida y las conclusiones se puedan explicar mejor gracias a dichas visualizaciones. Como hemos visto, las visualizaciones han sido de gran ayuda para comprender y explicar mejor la red que teníamos entre manos.
+\\\\
+Para la visualización de la red se ha usado principalmente como algoritmo de distribución \textbf{ForceAtlas 2}, que es el algoritmo que mejor representa (al menos a mi modo de ver) la red con la que hemos trabajado, ya que agrupa los nodos que se relacionan entre sí, lo que permite ver mejor las comunidades. De hecho, desde el principio y sin haber utilizado aún el algoritmo de Lovaina, ya se podían ver e intuir las comunidades que encontraríamos más tarde en nuestra red.
+\\\\
+Para las visualizaciones que hemos visto en las que se destaca el grado de los nodos, el PageRank y algunas otras medidas de análisis de redes, se han utilizado las opciones disponibles para ello en Gephi. Como por ejemplo, que el tamaño o el color del nodo se apliquen en función de alguna de estas medidas.
+
+
+\section{Discusión de los resultados y Conclusiones}
+
+Como hemos visto a lo largo de este trabajo, hemos sido capaces de responder a la pregunta de investigación que nos hacíamos al comienzo. Como hemos ido viendo en las distintas secciones de esta documentación, los usuarios más importantes en nuestra red estaban relativamente claros independientemente de las medidas de análisis que usásemos. Todas nos conducían de un modo u otro a los mismos usuarios.
+\\\\
+El usuario más importante de toda la red es Iker Casillas (@casillasworld), que como hemos visto es el usuario con mayor número de menciones, y por tanto, con mayor grado de entrada. El resto de medidas, como hemos visto, también destacaban a este usuario y le daban el mayor valor de toda la red. Esto es algo totalmente lógico si tenemos en cuenta que fue el protagonista de la emisión junto a Piqué, que actuó mas bien como una especie de entrevistador.
+\\\\
+Por otro lado, tenemos que Tomás Roncero (@as\_tomasroncero) es, según casi todas las medidas que hemos visto, el segundo personaje más importante de nuestra red. Pero no solo es el segundo más importante, sino que hemos visto gráficamente y gracias a la detección de comunidades, que de su mano va también el usuario @elsimiolopez (cuenta de humor y aparentemente parodia de un compañero de Roncero, Siro Lopez). Hemos sido capaces de detectar que uno de los protagonistas en Twitter durante la emisión fue Tomás Roncero, y que el objetivo de los usuarios que lo mencionaban parece ser (sin mirar los tweets concretos) hacer chistes sobre el y buscar la atención de una cuenta de humor como la de @elsimiolopez. De esta forma, los usuarios probablemente buscaban ser retwitteados por esta cuenta humorística para ser más populares y que más usuarios les conozcan. Como he dicho, todo esto sin entrar a ver los tweets concretos y sin comprobar si realmente estas suposiciones son correctas. Aunque como usuario de Twitter, se que este es el comportamiento habitual, los usuario aprovechan este tipo de acontecimientos para llevarse su minuto de gloria haciendo algún tweet gracioso y recibiendo algún retweet por parte de alguna cuenta de humor con muchos más seguidores.
+\\\\
+De igual manera que hemos visto con Roncero y @elsimiolopez, también tenemos un caso similar con las cuentas de Pedrerol (@jpedrerol), presentador del programa de televisión sobre fútbol, "El Chiringuito", y @elchirincirco. En este caso, tenemos que este comportamiento parece lógico, ya que al ser Pedrerol el presentador del programa es normal que pueda recibir gran parte de las críticas y los chistes. Por tanto, la conclusión para este par de usuarios es la misma que para los anteriores, un grupo de usuarios que mencionan a estos dos con el objetivo de hacer chistes que tienen como protagonista a Prederol y como objetivo ser retwiteados por @elchirincirco.
+\\\\
+Finalmente, a parte de los protagonistas que hemos visto, tenemos las cuentas de @hoyendeportes4, @abc\_deportes y @juanmacastano, que como hemos visto en algunas medidas de análisis como el PageRank, el Vector Propio y el Grado, eran los siguientes usuarios más importantes de nuestra red. Algunos de ellos, aún siendo usuarios importantes, no "lideraban" una comunidad por si sola (como habíamos visto con Casillas, Pedrerol o Roncero), como hemos visto, sino que formaban parte de comunidades más grandes. Esto ocurre porque se han mencionado junto a usuarios más importantes, por lo que a la hora de descubrir comunidades tienden a formar parte de otras comunidades, como es el caso de @juanmacastano, que es mencionando generalmente junto a Casillas, por lo que él y los usuarios que los mencionan forman parte de la comunidad en torno a Casillas.
+\\\\
+Estos han sido principalmente los usuarios más importantes de la red y las conclusiones que podemos sacar de ello. Pero en torno a las comunidades no solo hemos sido capaces de sacar conclusiones como las anteriores, sino que también hemos detectado algunas cosas curiosas. Por ejemplo, parece interesante que tengamos una comunidad en la que se incluyen 4 jugadores del FC Barcelona (\_pedro17\_, jordialba, marcbartra y sergiroberto) y los usuarios que los mencionan.
+\\
+También me ha parecido curioso que jugadores como Sergio Ramos, Jordi Alba o Marc Bartra hayan sido más mencionados y aparezcan con valores superiores de vector propio que otros jugadores, como por ejemplo Cesc Fabregas que estuvo presente en la emisión junto a Piqué y Casillas. Si bien es cierto que uno de los espectadores de Periscope hizo una pregunta relativa a Bartra y se hablo unos segundos de él, pero bajo mi punto de vista es curioso que se mencionase más a Bartra que al propio Cesc.
+
 
 \end{document}
