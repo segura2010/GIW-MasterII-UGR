@@ -2,17 +2,17 @@
 \contentsline {section}{\numberline {2}Trabajo Realizado}{3}{section.2}
 \contentsline {subsection}{\numberline {2.1}Descripci\'on del Problema}{3}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}C\'alculo de los valores de las medidas de an\'alisis}{3}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Propiedades de la red}{4}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Distribuciones de Grados}{4}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Distribuciones de Distancias}{5}{subsubsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.3}Coeficiente de Clustering}{5}{subsubsection.2.3.3}
-\contentsline {subsection}{\numberline {2.4}Calculo de los valores de las medidas de an\'alisis de redes sociales}{6}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Grado}{6}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}Cercan\IeC {\'\i }a}{7}{subsubsection.2.4.2}
-\contentsline {subsubsection}{\numberline {2.4.3}Intermediaci\'on}{8}{subsubsection.2.4.3}
-\contentsline {subsubsection}{\numberline {2.4.4}Vector Propio}{9}{subsubsection.2.4.4}
-\contentsline {subsubsection}{\numberline {2.4.5}PageRank}{9}{subsubsection.2.4.5}
-\contentsline {subsubsection}{\numberline {2.4.6}Medidas m\'as interesantes}{11}{subsubsection.2.4.6}
-\contentsline {subsection}{\numberline {2.5}Descubrimiento de comunidades}{11}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Visualizaci\'on de la red}{15}{subsection.2.6}
-\contentsline {section}{\numberline {3}Discusi\'on de los resultados y Conclusiones}{15}{section.3}
+\contentsline {subsection}{\numberline {2.3}Propiedades de la red}{5}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Distribuciones de Grados}{5}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Distribuciones de Distancias}{7}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Coeficiente de Clustering}{7}{subsubsection.2.3.3}
+\contentsline {subsection}{\numberline {2.4}Calculo de los valores de las medidas de an\'alisis de redes sociales}{9}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Grado}{10}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Cercan\IeC {\'\i }a}{11}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Intermediaci\'on}{12}{subsubsection.2.4.3}
+\contentsline {subsubsection}{\numberline {2.4.4}Vector Propio}{13}{subsubsection.2.4.4}
+\contentsline {subsubsection}{\numberline {2.4.5}PageRank}{13}{subsubsection.2.4.5}
+\contentsline {subsubsection}{\numberline {2.4.6}Medidas m\'as interesantes}{14}{subsubsection.2.4.6}
+\contentsline {subsection}{\numberline {2.5}Descubrimiento de comunidades}{15}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Visualizaci\'on de la red}{19}{subsection.2.6}
+\contentsline {section}{\numberline {3}Discusi\'on de los resultados y Conclusiones}{20}{section.3}

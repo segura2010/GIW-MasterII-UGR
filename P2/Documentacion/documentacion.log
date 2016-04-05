@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.4)  4 APR 2016 20:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.4)  5 APR 2016 13:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -585,290 +585,379 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--167
 
  []
 
-<img/grados/indegree-distribution.png, id=136, 602.25pt x 401.5pt>
-File: img/grados/indegree-distribution.png Graphic file (type png)
+<img/comunidades/comunidades.pdf, id=135, 1226.98402pt x 1055.14195pt>
+File: img/comunidades/comunidades.pdf Graphic file (type pdf)
 
-<use img/grados/indegree-distribution.png>
-Package pdftex.def Info: img/grados/indegree-distribution.png used on input lin
-e 177.
-(pdftex.def)             Requested size: 249.93466pt x 166.62552pt.
+<use img/comunidades/comunidades.pdf>
+Package pdftex.def Info: img/comunidades/comunidades.pdf used on input line 170
+.
+(pdftex.def)             Requested size: 250.93842pt x 215.7903pt.
 
-<img/grados/outdegree-distribution.png, id=138, 602.25pt x 401.5pt>
-File: img/grados/outdegree-distribution.png Graphic file (type png)
+<img/comunidades/componente_gigante_sinsolapar.pdf, id=136, 1111.35194pt x 1059
+.96pt>
+File: img/comunidades/componente_gigante_sinsolapar.pdf Graphic file (type pdf)
 
-<use img/grados/outdegree-distribution.png>
-Package pdftex.def Info: img/grados/outdegree-distribution.png used on input li
-ne 183.
-(pdftex.def)             Requested size: 249.93466pt x 166.62552pt.
+ <use img/comunidades/componente_gigante_sinsolapar.pdf>
+Package pdftex.def Info: img/comunidades/componente_gigante_sinsolapar.pdf used
+ on input line 176.
+(pdftex.def)             Requested size: 250.93842pt x 239.32173pt.
  [4pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.186 
-       <./img/grados/indegree-distribution.png>]
-<img/grados/degree-distribution.png, id=148, 602.25pt x 401.5pt>
-File: img/grados/degree-distribution.png Graphic file (type png)
+l.179 
+       <./img/comunidades/comunidades.pdf>]
+<img/grados/indegree-distribution.png, id=151, 602.25pt x 401.5pt>
+File: img/grados/indegree-distribution.png Graphic file (type png)
 
-<use img/grados/degree-distribution.png>
-Package pdftex.def Info: img/grados/degree-distribution.png used on input line 
-189.
+<use img/grados/indegree-distribution.png>
+Package pdftex.def Info: img/grados/indegree-distribution.png used on input lin
+e 191.
 (pdftex.def)             Requested size: 249.93466pt x 166.62552pt.
  [5pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.207 
+l.194 
+       <./img/comunidades/componente_gigante_sinsolapar.pdf>]
+<img/grados/outdegree-distribution.png, id=166, 602.25pt x 401.5pt>
+File: img/grados/outdegree-distribution.png Graphic file (type png)
+
+<use img/grados/outdegree-distribution.png>
+Package pdftex.def Info: img/grados/outdegree-distribution.png used on input li
+ne 197.
+(pdftex.def)             Requested size: 249.93466pt x 166.62552pt.
+
+<img/grados/degree-distribution.png, id=167, 602.25pt x 401.5pt>
+File: img/grados/degree-distribution.png Graphic file (type png)
+
+<use img/grados/degree-distribution.png>
+Package pdftex.def Info: img/grados/degree-distribution.png used on input line 
+203.
+(pdftex.def)             Requested size: 249.93466pt x 166.62552pt.
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.208 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
-3}) has been already used, duplicate ignored
+4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.207 
-       <./img/grados/outdegree-distribution.png> <./img/grados/degree-distribut
-ion.png>] [6pdfTeX warning (ext4): destination with the same identifier (name{t
-able.1}) has been already used, duplicate ignored
+l.208 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.249 
-      ]
-<img/centralidad/centralidad_grado.pdf, id=165, 1024.62799pt x 1021.41597pt>
+l.208 
+       <./img/grados/indegree-distribution.png> <./img/grados/outdegree-distrib
+ution.png> <./img/grados/degree-distribution.png>]
+<img/distribuciones_distancia/Betweenness_Centrality_Distribution.png, id=177, 
+602.25pt x 401.5pt>
+File: img/distribuciones_distancia/Betweenness_Centrality_Distribution.png Grap
+hic file (type png)
+
+<use img/distribuciones_distancia/Betweenness_Centrality_Distribution.png>
+Package pdftex.def Info: img/distribuciones_distancia/Betweenness_Centrality_Di
+stribution.png used on input line 216.
+(pdftex.def)             Requested size: 250.93842pt x 167.29329pt.
+
+<img/distribucion_clustering/distribucion_clustering.png, id=178, 602.25pt x 40
+1.5pt>
+File: img/distribucion_clustering/distribucion_clustering.png Graphic file (typ
+e png)
+ <use img/distribucion_clustering/distribucion_clustering.png>
+Package pdftex.def Info: img/distribucion_clustering/distribucion_clustering.pn
+g used on input line 229.
+(pdftex.def)             Requested size: 250.93842pt x 167.29329pt.
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.6})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.232 
+       <./img/distribuciones_distancia/Betweenness_Centrality_Distribution.png>
+]
+<img/distribucion_clustering/visualiazicion_coef_clustering.pdf, id=190, 862.42
+201pt x 1014.99202pt>
+File: img/distribucion_clustering/visualiazicion_coef_clustering.pdf Graphic fi
+le (type pdf)
+
+<use img/distribucion_clustering/visualiazicion_coef_clustering.pdf>
+Package pdftex.def Info: img/distribucion_clustering/visualiazicion_coef_cluste
+ring.pdf used on input line 237.
+(pdftex.def)             Requested size: 250.93842pt x 295.33134pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--244
+
+ []
+
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.244 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.244 
+       <./img/distribucion_clustering/distribucion_clustering.png> <./img/distr
+ibucion_clustering/visualiazicion_coef_clustering.pdf>] [9]
+<img/centralidad/centralidad_grado.pdf, id=209, 1024.62799pt x 1021.41597pt>
 File: img/centralidad/centralidad_grado.pdf Graphic file (type pdf)
 
 <use img/centralidad/centralidad_grado.pdf>
 Package pdftex.def Info: img/centralidad/centralidad_grado.pdf used on input li
-ne 255.
+ne 293.
 (pdftex.def)             Requested size: 249.93466pt x 249.15031pt.
- [7pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
+ [10pdfTeX warning (ext4): destination with the same identifier (name{table.1})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.263 \subsubsection
-                    {Intermediación} <./img/centralidad/centralidad_grado.pdf>]
-<img/intermediacion/intermediacion_1.pdf, id=180, 655.24799pt x 875.27pt>
+l.296 
+      ] [11pdfTeX warning (ext4): destination with the same identifier (name{fi
+gure.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.323 
+       <./img/centralidad/centralidad_grado.pdf>]
+<img/intermediacion/intermediacion_1.pdf, id=229, 655.24799pt x 875.27pt>
 File: img/intermediacion/intermediacion_1.pdf Graphic file (type pdf)
 
 <use img/intermediacion/intermediacion_1.pdf>
 Package pdftex.def Info: img/intermediacion/intermediacion_1.pdf used on input 
-line 290.
+line 328.
 (pdftex.def)             Requested size: 180.67566pt x 241.34773pt.
- [8pdfTeX warning (ext4): destination with the same identifier (name{table.2}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.297 \subsubsection
-                    {Vector Propio}pdfTeX warning (ext4): destination with the 
-same identifier (name{figure.5}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.297 \subsubsection
-                    {Vector Propio} <./img/intermediacion/intermediacion_1.pdf>
-] <img/vector_propio/vector_propio.pdf, id=195, 1111.35194pt x 990.90201pt>
-File: img/vector_propio/vector_propio.pdf Graphic file (type pdf)
-
-<use img/vector_propio/vector_propio.pdf>
-Package pdftex.def Info: img/vector_propio/vector_propio.pdf used on input line
- 324.
-(pdftex.def)             Requested size: 250.93842pt x 223.72957pt.
- [9pdfTeX warning (ext4): destination with the same identifier (name{table.3}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.332 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-6}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.332 
-       <./img/vector_propio/vector_propio.pdf>]
-<img/vector_propio/pagerank.pdf, id=208, 1185.22804pt x 1048.71805pt>
-File: img/vector_propio/pagerank.pdf Graphic file (type pdf)
-
-<use img/vector_propio/pagerank.pdf>
-Package pdftex.def Info: img/vector_propio/pagerank.pdf used on input line 359.
-
-(pdftex.def)             Requested size: 250.93842pt x 222.02953pt.
- [10pdfTeX warning (ext4): destination with the same identifier (name{table.4})
+ [12pdfTeX warning (ext4): destination with the same identifier (name{table.2})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.369 
+l.357 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
-7}) has been already used, duplicate ignored
+10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.369 
-       <./img/vector_propio/pagerank.pdf>]
-<img/comunidades/comunidades.pdf, id=222, 1226.98402pt x 1055.14195pt>
-File: img/comunidades/comunidades.pdf Graphic file (type pdf)
+l.357 
+       <./img/intermediacion/intermediacion_1.pdf>]
+<img/vector_propio/vector_propio.pdf, id=244, 1111.35194pt x 990.90201pt>
+File: img/vector_propio/vector_propio.pdf Graphic file (type pdf)
 
-<use img/comunidades/comunidades.pdf>
-Package pdftex.def Info: img/comunidades/comunidades.pdf used on input line 378
-.
-(pdftex.def)             Requested size: 250.93842pt x 215.7903pt.
-
-<img/comunidades/comunidades_centro.pdf, id=225, 1050.32402pt x 941.11598pt>
-File: img/comunidades/comunidades_centro.pdf Graphic file (type pdf)
-
-<use img/comunidades/comunidades_centro.pdf>
-Package pdftex.def Info: img/comunidades/comunidades_centro.pdf used on input l
-ine 386.
-(pdftex.def)             Requested size: 250.93842pt x 224.83852pt.
- [11pdfTeX warning (ext4): destination with the same identifier (name{figure.8}
-) has been already used, duplicate ignored
+<use img/vector_propio/vector_propio.pdf>
+Package pdftex.def Info: img/vector_propio/vector_propio.pdf used on input line
+ 362.
+(pdftex.def)             Requested size: 250.93842pt x 223.72957pt.
+ [13pdfTeX warning (ext4): destination with the same identifier (name{table.3})
+ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.389 
-       <./img/comunidades/comunidades.pdf>]
-<img/comunidades/comunidad_casillas.pdf, id=241, 661.67201pt x 767.66798pt>
-File: img/comunidades/comunidad_casillas.pdf Graphic file (type pdf)
-
-<use img/comunidades/comunidad_casillas.pdf>
-Package pdftex.def Info: img/comunidades/comunidad_casillas.pdf used on input l
-ine 414.
-(pdftex.def)             Requested size: 200.75073pt x 232.9143pt.
- [12pdfTeX warning (ext4): destination with the same identifier (name{figure.9}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.417 
-       <./img/comunidades/comunidades_centro.pdf>]
-<img/comunidades/comunidad_ramos.pdf, id=255, 289.08pt x 597.432pt>
-File: img/comunidades/comunidad_ramos.pdf Graphic file (type pdf)
-
-<use img/comunidades/comunidad_ramos.pdf>
-Package pdftex.def Info: img/comunidades/comunidad_ramos.pdf used on input line
- 420.
-(pdftex.def)             Requested size: 140.52562pt x 260.98386pt.
-
-<img/comunidades/comunidad_naranja.pdf, id=256, 812.63597pt x 995.72pt>
-File: img/comunidades/comunidad_naranja.pdf Graphic file (type pdf)
-
-<use img/comunidades/comunidad_naranja.pdf>
-Package pdftex.def Info: img/comunidades/comunidad_naranja.pdf used on input li
-ne 426.
-(pdftex.def)             Requested size: 140.52704pt x 200.75098pt.
- [13pdfTeX warning (ext4): destination with the same identifier (name{figure.10
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.429 
+l.370 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.429 
-       <./img/comunidades/comunidad_casillas.pdf> <./img/comunidades/comunidad_
-ramos.pdf
+l.370 
+       <./img/vector_propio/vector_propio.pdf>]
+<img/vector_propio/pagerank.pdf, id=258, 1185.22804pt x 1048.71805pt>
+File: img/vector_propio/pagerank.pdf Graphic file (type pdf)
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./img/comunidades/comunidad_
-ramos.pdf): PDF inclusion: multiple pdfs with page group included in a single p
-age
->]
-<img/comunidades/comunidad_barcelona.pdf, id=270, 957.17598pt x 750.00201pt>
+<use img/vector_propio/pagerank.pdf>
+Package pdftex.def Info: img/vector_propio/pagerank.pdf used on input line 397.
+
+(pdftex.def)             Requested size: 250.93842pt x 222.02953pt.
+ [14pdfTeX warning (ext4): destination with the same identifier (name{table.4})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.407 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.407 
+       <./img/vector_propio/pagerank.pdf>]
+File: img/comunidades/comunidades.pdf Graphic file (type pdf)
+
+<use img/comunidades/comunidades.pdf>
+Package pdftex.def Info: img/comunidades/comunidades.pdf used on input line 416
+.
+(pdftex.def)             Requested size: 250.93842pt x 215.7903pt.
+
+<img/comunidades/comunidades_centro.pdf, id=274, 1050.32402pt x 941.11598pt>
+File: img/comunidades/comunidades_centro.pdf Graphic file (type pdf)
+
+<use img/comunidades/comunidades_centro.pdf>
+Package pdftex.def Info: img/comunidades/comunidades_centro.pdf used on input l
+ine 424.
+(pdftex.def)             Requested size: 250.93842pt x 224.83852pt.
+ [15pdfTeX warning (ext4): destination with the same identifier (name{figure.13
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.427 
+      ]
+File: img/comunidades/componente_gigante_sinsolapar.pdf Graphic file (type pdf)
+
+ <use img/comunidades/componente_gigante_sinsolapar.pdf>
+Package pdftex.def Info: img/comunidades/componente_gigante_sinsolapar.pdf used
+ on input line 430.
+(pdftex.def)             Requested size: 250.93842pt x 239.32173pt.
+ [16pdfTeX warning (ext4): destination with the same identifier (name{figure.14
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.440 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+15}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.440 
+       <./img/comunidades/comunidades_centro.pdf>]
+<img/comunidades/comunidad_casillas.pdf, id=298, 661.67201pt x 767.66798pt>
+File: img/comunidades/comunidad_casillas.pdf Graphic file (type pdf)
+
+<use img/comunidades/comunidad_casillas.pdf>
+Package pdftex.def Info: img/comunidades/comunidad_casillas.pdf used on input l
+ine 458.
+(pdftex.def)             Requested size: 200.75073pt x 232.9143pt.
+
+<img/comunidades/comunidad_ramos.pdf, id=299, 289.08pt x 597.432pt>
+File: img/comunidades/comunidad_ramos.pdf Graphic file (type pdf)
+
+<use img/comunidades/comunidad_ramos.pdf>
+Package pdftex.def Info: img/comunidades/comunidad_ramos.pdf used on input line
+ 464.
+(pdftex.def)             Requested size: 140.52562pt x 260.98386pt.
+ [17pdfTeX warning (ext4): destination with the same identifier (name{figure.16
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.467 
+       <./img/comunidades/comunidad_casillas.pdf>]
+<img/comunidades/comunidad_naranja.pdf, id=312, 812.63597pt x 995.72pt>
+File: img/comunidades/comunidad_naranja.pdf Graphic file (type pdf)
+
+<use img/comunidades/comunidad_naranja.pdf>
+Package pdftex.def Info: img/comunidades/comunidad_naranja.pdf used on input li
+ne 470.
+(pdftex.def)             Requested size: 140.52704pt x 200.75098pt.
+
+<img/comunidades/comunidad_barcelona.pdf, id=313, 957.17598pt x 750.00201pt>
 File: img/comunidades/comunidad_barcelona.pdf Graphic file (type pdf)
 
 <use img/comunidades/comunidad_barcelona.pdf>
 Package pdftex.def Info: img/comunidades/comunidad_barcelona.pdf used on input 
-line 432.
+line 476.
 (pdftex.def)             Requested size: 200.74998pt x 200.74086pt.
+ [18pdfTeX warning (ext4): destination with the same identifier (name{figure.17
+}) has been already used, duplicate ignored
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--439
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.479 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+18}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.479 
+       <./img/comunidades/comunidad_ramos.pdf> <./img/comunidades/comunidad_nar
+anja.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./img/comunidades/comunidad_
+naranja.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 480--483
 
  []
 
-[14pdfTeX warning (ext4): destination with the same identifier (name{figure.12}
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--491
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--491
+
+ []
+
+[19pdfTeX warning (ext4): destination with the same identifier (name{figure.19}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.439 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-13}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.439 
-       <./img/comunidades/comunidad_naranja.pdf> <./img/comunidades/comunidad_b
-arcelona.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./img/comunidades/comunidad_
-barcelona.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
->]
-Underfull \hbox (badness 10000) in paragraph at lines 442--447
+l.491 
+       <./img/comunidades/comunidad_barcelona.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 495--508
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--447
+Underfull \hbox (badness 10000) in paragraph at lines 495--508
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 451--464
+Underfull \hbox (badness 10000) in paragraph at lines 495--508
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 451--464
+Underfull \hbox (badness 10000) in paragraph at lines 495--508
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 451--464
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 451--464
-
- []
-
-
-Overfull \hbox (19.48477pt too wide) in paragraph at lines 451--464
+Overfull \hbox (19.48477pt too wide) in paragraph at lines 495--508
 \OT1/cmr/m/n/10 Finalmente, a parte de los pro-tag-o-nistas que hemos visto, te
 n-emos las cuen-tas de @hoyen-de-portes4, @abc[]deportes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 451--464
+Underfull \hbox (badness 10000) in paragraph at lines 495--508
 
  []
 
-[15] 
+[20] 
 AED: lastpage setting LastPage
-[16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 466.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 466.
+[21]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 515.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 515.
  (./documentacion.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 466.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 466.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 515.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 515.
 Package rerunfilecheck Info: File `documentacion.out' has not changed.
 (rerunfilecheck)             Checksum: 2E31BE7A1AD89C452ADF03A145F34DDF;1402.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 466.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 515.
  ) 
 Here is how much of TeX's memory you used:
- 7794 strings out of 493089
- 115706 string characters out of 6134843
- 312752 words of memory out of 5000000
- 11113 multiletter control sequences out of 15000+600000
+ 7834 strings out of 493089
+ 117125 string characters out of 6134843
+ 310184 words of memory out of 5000000
+ 11135 multiletter control sequences out of 15000+600000
  9578 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,12n,43p,1827b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,12n,43p,1827b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/tex
@@ -882,10 +971,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on documentacion.pdf (16 pages, 2195165 bytes).
+Output written on documentacion.pdf (21 pages, 2944987 bytes).
 PDF statistics:
- 348 PDF objects out of 1000 (max. 8388607)
- 289 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 210 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 404 PDF objects out of 1000 (max. 8388607)
+ 332 compressed objects within 4 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 230 words of extra memory for PDF output out of 10000 (max. 10000000)
 

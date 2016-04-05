@@ -161,8 +161,22 @@ Nuestra red social tiene los siguiente valores para las medidas de análisis:
 	\item \textbf{Coeficiente de Clustering Medio para la red aleatoria equivalente ($<C_{aleatoria}> = \frac{<k>}{N} $)}: 0.0009
 \end{itemize}
 
-El número de componentes conexas es de 929, mientras que 883 de los nodos no están conectados con ningún otro, ya que los usuario mencionan principalmente a Piqué (eliminado de la red) y a Iker Casillas. En general los usuarios no se mencionan entre si, salvo excepciones. La componente gigante de nuestra red es Iker Casillas (@casillasworld), ya que recibe la mayor parte de menciones de los usuarios. Tiene un grado de 434 (grado de entrada=434 ; grado de salida=0), por tanto 434 aristas de las 1464 totales son dirigidas a Casillas (un 29.64\%). Como vemos, Casillas es, principalmente, el centro de la red. Cosa que tiene sentido, pues es conocido y es el protagonista de la emisión junto a Piqué. Sin embargo, como veremos más adelante, hay otros usuarios importantes en nuestra red, que son mencionados por los espectadores a la hora de comentar el evento.
+El número de componentes conexas es de 929, mientras que 883 de los nodos no están conectados con ningún otro, ya que los usuario mencionan principalmente a Piqué (eliminado de la red) y a Iker Casillas. En general los usuarios no se mencionan entre si, salvo excepciones. Es por esto que el grado medio sea tan bajo, pues aunque Casillas recibe muchas conexiones, también hay muchos usuarios que han quedado aislados al eliminar a Piqué de la red.
 \\\\
+La componente gigante de nuestra red está en torno a Iker Casillas (@casillasworld), ya que recibe la mayor parte de menciones de los usuarios. La componente gigante contienen un total de 725 nodos (un 41.12\% del total) y 1345 aristas (91.87\% del total). En la figura \ref{red:total} podemos ver una primera visualización de nuestra red, mientras que en la figura \ref{red:componente_gigante} podemos ver la parte de la red correspondiente a la componente gigante.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=250px]{img/comunidades/comunidades.pdf}
+	\caption{Red de estudio\label{red:total}}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=250px]{img/comunidades/componente_gigante_sinsolapar.pdf}
+	\caption{Componente Gigante de la red \label{red:componente_gigante}}
+\end{figure}
+
 Los nodos que hemos visto, cuyo grado es 0, no están conectados a ningún otro nodo de la red, pues mencionaban únicamente a Piqué (que ha sido eliminado de la red por ser el centro de la misma). Estos usuarios, no son de gran interés y en general son usuarios aislados que en algún momento han comentado la emisión. El resto de usuario que si están conectados a otros usuarios nos ayudarán a detectar comunidades y actores relevantes de nuestra red. En cuanto a la detección de comunidades, veremos más adelante exactamente que nos cuentan, pero a priori las comunidades de nuestra red deberían representar conversaciones entre diferentes usuarios sobre el evento.
 
 
@@ -190,20 +204,44 @@ En las figuras \ref{dist:gradosentrada} y \ref{dist:gradossalida} podemos ver la
 	\caption{Distribución de grados\label{dist:grados}}
 \end{figure}
 
-A partir de estas distribuciones de probabilidad de los grados de entrada y salida de los nodos de nuestra red social, podemos determinar que nuestra red es libre de escala, y por tanto, que sigue la \textbf{Ley de la Potencia}. Las gráficas nos muestran una distribución de larga estela, como ya se ha mencionado en teoría, por ello, \textbf{podemos deducir que la red es libre de escala}.
+A partir de estas distribuciones de probabilidad de los grados de entrada y salida de los nodos de nuestra red social, podemos determinar que nuestra red es libre de escala, y por tanto, que sigue la \textbf{Ley de la Potencia}. Las gráficas nos muestran una distribución de larga estela, como ya se ha mencionado en teoría, por ello, \textbf{podemos deducir que la red es libre de escala}. Tenemos una red con unos pocos nodos que concentran muchos enlaces hacía ellos (@casillasworld, @as\_tomasroncero, etc.). Estos nodos son los \textit{hubs} de nuestra red. Los veremos más en detalle en las siguientes secciones.
 
 
 \subsubsection{Distribuciones de Distancias}
 
-% TODO: Representar la distribucion de distancias medias como se ve en la p43 del tema 1.1 (?)
+En nuestra red pequeña, nos encontramos ante un caso de \textit{mundo ultra-pequeño}, ya que como vimos anteriormente la distancia media ($<d>$) tenía un valor de 1.01, mientras que la distancia media para una red aleatoria equivalente era de 14.73. Para un mundo ultra-pequeño, la distancia media debe ser aún menor que $\frac{log(N)}{log(log(N))}$, que en este caso obtiene un valor de 3.715, por lo que la distancia media de nuestra red tiene un valor más bajo incluso que la distancia media para un mundo ultra-pequeño. Por tanto, podemos concluir que \textbf{nuestra red social es un mundo ultra-pequeño}. En la figura \ref{dist:distancias} podemos ver la distribución de distancias.
 
-En nuestra red pequeña, nos encontramos ante un caso de \textit{mundo ultra-pequeño}, ya que como vimos anteriormente la distancia media ($<d>$) tenía un valor de 1.01, mientras que la distancia media para una red aleatoria equivalente era de 14.73. Para un mundo ultra-pequeño, la distancia media debe ser aún menor que $\frac{log(N)}{log(log(N))}$, que en este caso obtiene un valor de 3.715, por lo que la distancia media de nuestra red tiene un valor más bajo incluso que la distancia media para un mundo ultra-pequeño. Por tanto, podemos concluir que \textbf{nuestra red social es un mundo ultra-pequeño}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=250px]{img/distribuciones_distancia/Betweenness_Centrality_Distribution.png}
+	\caption{Distribución de Distancias\label{dist:distancias}}
+\end{figure}
+
+No se ve muy bien, pero si nos fijamos, cuando la distancia es 0, la frecuencia es muy alta. Sin embargo, conforme la distancia aumenta la frecuencia es mucho menor. Esto, como hemos visto, ocurre principalmente a causa de los nodos que se encuentran aislados, sin ninguna conexión (es un mundo ultra-pequeño, cada usuario es "su propio mundo").
+
 
 \subsubsection{Coeficiente de Clustering}
 
-% TODO: representar (?) y ver si: se comporta como una red regular (coeficiente de clustering constante con respecto al tamaño de la red), aleatoria (en torno a <k>/N) o libre de grado (coeficiente de clustering constante con respecto al tamaño de la red)
-
 El coeficiente de Clustering nos permite conocer la densidad local de la red, o dicho en otras palabras, la proporción de los vecinos de cada nodo que están conectados. En nuestra red, el coeficiente de clustering medio es de 0.05. Tenemos un coeficiente de clustering muy bajo, cosa que es lógica si nos fijamos en la gran cantidad de nodos que no están conectados con ningún otro nodo de la red. Como ya vimos antes, al eliminar a Piqué de la red, gran cantidad de nodos quedan totalmente desconectados y no tienen ninguna arista que los una a otros.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=250px]{img/distribucion_clustering/distribucion_clustering.png}
+	\caption{Distribución de Distancias\label{dist:clustering}}
+\end{figure}
+
+La figura \ref{dist:clustering} es el resultado que proporciona Gephi sobre el coeficiente de Clustering, como vemos, no es de utilidad porque no muestra nada en ella (he probado otras versiones por si fuese un problema de esta versión, pero el resultado es el mismo). Probablemente el problema es que no es capaz de representar valores tan bajos, ya que excepto unos cuantos nodos, la gram mayoría obtienen un coeficiente de Clustering igual a 0. Estos nodos son, evidentemente, los nodos que están aislados. Aún así, podemos visualizar la red de forma que, tanto el color de los nodos como su tamaño, se dibuje en función del coeficiente de Clustering de cada nodo. El resultado lo podemos ver en la figura \ref{red:clustering}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=250px]{img/distribucion_clustering/visualiazicion_coef_clustering.pdf}
+	\caption{Visualización de la red, donde el color y tamaño de los nodos representan su coeficiente de Clustering\label{red:clustering}}
+\end{figure}
+
+Como vemos, los nodos de la parte superior obtienen un coeficiente de clustering mayor, producido por que se conectan con los nodos que vemos cerca de ellos y que también tienen un coeficiente alto. Esto ocurre porque son pequeños grupos de usuarios que se mencionan entre ellos, creando pequeños grupos. Los nodos de la componente gigante que aparecen con un coeficiente de clustering mayor, son los nodos que se conectan (mencionan) a @as\_tomasroncero y a @elsimiolopez. Al tener estas dos conexiones en común, obtienen un coeficiente de clustering mayor. También podemos ver un pequeño grupo en la parte inferior de la componente gigante, en el que los usuarios se conectan entre si y por ello obtienen un coeficiente de clustering mayor.
+\\\\
+Como hemos visto, el hecho de que el coeficiente medio de clustering sea tan bajo, nos indica que no hay un grado significativo de clustering local, cosa que hemos podido ver en la figura \ref{red:clustering}, en la que hemos visto que solamente hay unos pocos grupos.
+
 
 \subsection{Calculo de los valores de las medidas de análisis de redes sociales}
 
@@ -384,7 +422,13 @@ En la figura \ref{red:comunidades} podemos ver que las 942 comunidades, son real
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=250px]{img/comunidades/comunidades_centro.pdf}
-	\caption{Comunidades interesantes de la red detectadas por el algoritmo de Lovaina\label{red:comunidades_centro}}
+	\caption{Comunidades interesantes de la red detectadas por el algoritmo de Lovaina\label{red:comunidades_centro_solapado}}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=250px]{img/comunidades/componente_gigante_sinsolapar.pdf}
+	\caption{Comunidades interesantes de la red detectadas por el algoritmo de Lovaina sin solapar\label{red:comunidades_centro}}
 \end{figure}
 
 De las 8 comunidades que si que son interesantes, podemos ver las siguientes:
@@ -461,6 +505,11 @@ Finalmente, a parte de los protagonistas que hemos visto, tenemos las cuentas de
 Estos han sido principalmente los usuarios más importantes de la red y las conclusiones que podemos sacar de ello. Pero en torno a las comunidades no solo hemos sido capaces de sacar conclusiones como las anteriores, sino que también hemos detectado algunas cosas curiosas. Por ejemplo, parece interesante que tengamos una comunidad en la que se incluyen 4 jugadores del FC Barcelona (\_pedro17\_, jordialba, marcbartra y sergiroberto) y los usuarios que los mencionan.
 \\
 También me ha parecido curioso que jugadores como Sergio Ramos, Jordi Alba o Marc Bartra hayan sido más mencionados y aparezcan con valores superiores de vector propio que otros jugadores, como por ejemplo Cesc Fabregas que estuvo presente en la emisión junto a Piqué y Casillas. Si bien es cierto que uno de los espectadores de Periscope hizo una pregunta relativa a Bartra y se hablo unos segundos de él, pero bajo mi punto de vista es curioso que se mencionase más a Bartra que al propio Cesc.
+
+
+\subsection*{Notas Finales sobre la Entrega}
+
+Junto a esta documentación en formato PDF se entrega \textbf{el fichero generado por Gephi con la red}, de forma que se pueda visualizar correctamente. Por si este fichero no funcionase correctamente también se incluye \textbf{el fichero CSV original} que se obtuvo a través de NodeXL para que simplemente sea necesario abrirlo con Gephi, aunque no estarán las medidas calculadas, ni la visualización ni Piqué estará eliminado, por lo que habría que hacerlo. En mi caso uso Mac, por lo que es posible que el fichero de Gephi no funcione. Yo obtuve el fichero CSV con NodeXL y lo abrí en Windows con Gephi, hice algunos calculos y lo pase a Mac, pero no conseguí abrir el fichero de Gephi que genere en Windows y tuve que empezar desde el principio en Mac.
 
 
 \end{document}
