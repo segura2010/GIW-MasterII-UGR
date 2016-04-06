@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.4)  5 APR 2016 21:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.4)  6 APR 2016 20:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -585,30 +585,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--167
 
  []
 
-<img/comunidades/comunidades.pdf, id=135, 1226.98402pt x 1055.14195pt>
-File: img/comunidades/comunidades.pdf Graphic file (type pdf)
+<img/comunidades/comunidades.png, id=135, 1226.6628pt x 1054.6602pt>
+File: img/comunidades/comunidades.png Graphic file (type png)
 
-<use img/comunidades/comunidades.pdf>
-Package pdftex.def Info: img/comunidades/comunidades.pdf used on input line 170
+<use img/comunidades/comunidades.png>
+Package pdftex.def Info: img/comunidades/comunidades.png used on input line 170
 .
-(pdftex.def)             Requested size: 250.93842pt x 215.7903pt.
+(pdftex.def)             Requested size: 250.93842pt x 215.74005pt.
 
-<img/comunidades/componente_gigante_sinsolapar.pdf, id=136, 1111.35194pt x 1059
-.96pt>
-File: img/comunidades/componente_gigante_sinsolapar.pdf Graphic file (type pdf)
+<img/comunidades/componente_gigante_sinsolapar.png, id=137, 1111.0308pt x 1059.
+96pt>
+File: img/comunidades/componente_gigante_sinsolapar.png Graphic file (type png)
 
- <use img/comunidades/componente_gigante_sinsolapar.pdf>
-Package pdftex.def Info: img/comunidades/componente_gigante_sinsolapar.pdf used
+ <use img/comunidades/componente_gigante_sinsolapar.png>
+Package pdftex.def Info: img/comunidades/componente_gigante_sinsolapar.png used
  on input line 176.
-(pdftex.def)             Requested size: 250.93842pt x 239.32173pt.
+(pdftex.def)             Requested size: 250.93842pt x 239.4026pt.
  [4pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.179 
-       <./img/comunidades/comunidades.pdf>]
-<img/grados/indegree-distribution.png, id=151, 602.25pt x 401.5pt>
+       <./img/comunidades/comunidades.png>]
+<img/grados/indegree-distribution.png, id=149, 602.25pt x 401.5pt>
 File: img/grados/indegree-distribution.png Graphic file (type png)
 
 <use img/grados/indegree-distribution.png>
@@ -621,8 +621,8 @@ e 191.
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.194 
-       <./img/comunidades/componente_gigante_sinsolapar.pdf>]
-<img/grados/outdegree-distribution.png, id=166, 602.25pt x 401.5pt>
+       <./img/comunidades/componente_gigante_sinsolapar.png>]
+<img/grados/outdegree-distribution.png, id=160, 602.25pt x 401.5pt>
 File: img/grados/outdegree-distribution.png Graphic file (type png)
 
 <use img/grados/outdegree-distribution.png>
@@ -630,7 +630,7 @@ Package pdftex.def Info: img/grados/outdegree-distribution.png used on input li
 ne 197.
 (pdftex.def)             Requested size: 249.93466pt x 166.62552pt.
 
-<img/grados/degree-distribution.png, id=167, 602.25pt x 401.5pt>
+<img/grados/degree-distribution.png, id=161, 602.25pt x 401.5pt>
 File: img/grados/degree-distribution.png Graphic file (type png)
 
 <use img/grados/degree-distribution.png>
@@ -657,7 +657,7 @@ l.208
 l.208 
        <./img/grados/indegree-distribution.png> <./img/grados/outdegree-distrib
 ution.png> <./img/grados/degree-distribution.png>]
-<img/distribuciones_distancia/Betweenness_Centrality_Distribution.png, id=177, 
+<img/distribuciones_distancia/Betweenness_Centrality_Distribution.png, id=171, 
 602.25pt x 401.5pt>
 File: img/distribuciones_distancia/Betweenness_Centrality_Distribution.png Grap
 hic file (type png)
@@ -667,7 +667,7 @@ Package pdftex.def Info: img/distribuciones_distancia/Betweenness_Centrality_Di
 stribution.png used on input line 216.
 (pdftex.def)             Requested size: 250.93842pt x 167.29329pt.
 
-<img/distribucion_clustering/distribucion_clustering.png, id=178, 602.25pt x 40
+<img/distribucion_clustering/distribucion_clustering.png, id=172, 602.25pt x 40
 1.5pt>
 File: img/distribucion_clustering/distribucion_clustering.png Graphic file (typ
 e png)
@@ -683,15 +683,15 @@ g used on input line 229.
 l.232 
        <./img/distribuciones_distancia/Betweenness_Centrality_Distribution.png>
 ]
-<img/distribucion_clustering/visualiazicion_coef_clustering.pdf, id=190, 862.42
-201pt x 1014.99202pt>
-File: img/distribucion_clustering/visualiazicion_coef_clustering.pdf Graphic fi
-le (type pdf)
+<img/distribucion_clustering/visualiazicion_coef_clustering.png, id=184, 862.42
+2pt x 1014.6708pt>
+File: img/distribucion_clustering/visualiazicion_coef_clustering.png Graphic fi
+le (type png)
 
-<use img/distribucion_clustering/visualiazicion_coef_clustering.pdf>
+<use img/distribucion_clustering/visualiazicion_coef_clustering.png>
 Package pdftex.def Info: img/distribucion_clustering/visualiazicion_coef_cluste
-ring.pdf used on input line 237.
-(pdftex.def)             Requested size: 250.93842pt x 295.33134pt.
+ring.png used on input line 237.
+(pdftex.def)             Requested size: 250.93842pt x 295.23788pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 241--244
 
@@ -710,14 +710,14 @@ l.244
                                                   \fi \fi 
 l.244 
        <./img/distribucion_clustering/distribucion_clustering.png> <./img/distr
-ibucion_clustering/visualiazicion_coef_clustering.pdf>] [9]
-<img/centralidad/centralidad_grado.pdf, id=209, 1024.62799pt x 1021.41597pt>
-File: img/centralidad/centralidad_grado.pdf Graphic file (type pdf)
+ibucion_clustering/visualiazicion_coef_clustering.png>] [9]
+<img/centralidad/centralidad_grado.png, id=201, 1024.3068pt x 1020.9342pt>
+File: img/centralidad/centralidad_grado.png Graphic file (type png)
 
-<use img/centralidad/centralidad_grado.pdf>
-Package pdftex.def Info: img/centralidad/centralidad_grado.pdf used on input li
+<use img/centralidad/centralidad_grado.png>
+Package pdftex.def Info: img/centralidad/centralidad_grado.png used on input li
 ne 293.
-(pdftex.def)             Requested size: 249.93466pt x 249.15031pt.
+(pdftex.def)             Requested size: 249.93466pt x 249.1107pt.
  [10pdfTeX warning (ext4): destination with the same identifier (name{table.1})
  has been already used, duplicate ignored
 
@@ -730,14 +730,14 @@ gure.9}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.323 
-       <./img/centralidad/centralidad_grado.pdf>]
-<img/intermediacion/intermediacion_1.pdf, id=229, 655.24799pt x 875.27pt>
-File: img/intermediacion/intermediacion_1.pdf Graphic file (type pdf)
+       <./img/centralidad/centralidad_grado.png>]
+<img/intermediacion/intermediacion_1.png, id=218, 654.7662pt x 874.9488pt>
+File: img/intermediacion/intermediacion_1.png Graphic file (type png)
 
-<use img/intermediacion/intermediacion_1.pdf>
-Package pdftex.def Info: img/intermediacion/intermediacion_1.pdf used on input 
+<use img/intermediacion/intermediacion_1.png>
+Package pdftex.def Info: img/intermediacion/intermediacion_1.png used on input 
 line 328.
-(pdftex.def)             Requested size: 180.67566pt x 241.34773pt.
+(pdftex.def)             Requested size: 180.67566pt x 241.43272pt.
  [12pdfTeX warning (ext4): destination with the same identifier (name{table.2})
  has been already used, duplicate ignored
 
@@ -750,14 +750,14 @@ l.357
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.357 
-       <./img/intermediacion/intermediacion_1.pdf>]
-<img/vector_propio/vector_propio.pdf, id=244, 1111.35194pt x 990.90201pt>
-File: img/vector_propio/vector_propio.pdf Graphic file (type pdf)
+       <./img/intermediacion/intermediacion_1.png>]
+<img/vector_propio/vector_propio.png, id=230, 1111.0308pt x 990.5808pt>
+File: img/vector_propio/vector_propio.png Graphic file (type png)
 
-<use img/vector_propio/vector_propio.pdf>
-Package pdftex.def Info: img/vector_propio/vector_propio.pdf used on input line
+<use img/vector_propio/vector_propio.png>
+Package pdftex.def Info: img/vector_propio/vector_propio.png used on input line
  362.
-(pdftex.def)             Requested size: 250.93842pt x 223.72957pt.
+(pdftex.def)             Requested size: 250.93842pt x 223.73262pt.
  [13pdfTeX warning (ext4): destination with the same identifier (name{table.3})
  has been already used, duplicate ignored
 
@@ -770,14 +770,14 @@ l.370
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.370 
-       <./img/vector_propio/vector_propio.pdf>]
-<img/vector_propio/pagerank.pdf, id=258, 1185.22804pt x 1048.71805pt>
-File: img/vector_propio/pagerank.pdf Graphic file (type pdf)
+       <./img/vector_propio/vector_propio.png>]
+<img/vector_propio/pagerank.png, id=241, 1185.228pt x 1048.3968pt>
+File: img/vector_propio/pagerank.png Graphic file (type png)
 
-<use img/vector_propio/pagerank.pdf>
-Package pdftex.def Info: img/vector_propio/pagerank.pdf used on input line 397.
+<use img/vector_propio/pagerank.png>
+Package pdftex.def Info: img/vector_propio/pagerank.png used on input line 397.
 
-(pdftex.def)             Requested size: 250.93842pt x 222.02953pt.
+(pdftex.def)             Requested size: 250.93842pt x 221.96152pt.
  [14pdfTeX warning (ext4): destination with the same identifier (name{table.4})
  has been already used, duplicate ignored
 
@@ -790,21 +790,21 @@ l.407
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.407 
-       <./img/vector_propio/pagerank.pdf>]
-File: img/comunidades/comunidades.pdf Graphic file (type pdf)
+       <./img/vector_propio/pagerank.png>]
+File: img/comunidades/comunidades.png Graphic file (type png)
 
-<use img/comunidades/comunidades.pdf>
-Package pdftex.def Info: img/comunidades/comunidades.pdf used on input line 416
+<use img/comunidades/comunidades.png>
+Package pdftex.def Info: img/comunidades/comunidades.png used on input line 416
 .
-(pdftex.def)             Requested size: 250.93842pt x 215.7903pt.
+(pdftex.def)             Requested size: 250.93842pt x 215.74005pt.
 
-<img/comunidades/comunidades_centro.pdf, id=274, 1050.32402pt x 941.11598pt>
-File: img/comunidades/comunidades_centro.pdf Graphic file (type pdf)
+<img/comunidades/comunidades_centro.png, id=254, 1050.324pt x 940.9554pt>
+File: img/comunidades/comunidades_centro.png Graphic file (type png)
 
-<use img/comunidades/comunidades_centro.pdf>
-Package pdftex.def Info: img/comunidades/comunidades_centro.pdf used on input l
+<use img/comunidades/comunidades_centro.png>
+Package pdftex.def Info: img/comunidades/comunidades_centro.png used on input l
 ine 424.
-(pdftex.def)             Requested size: 250.93842pt x 224.83852pt.
+(pdftex.def)             Requested size: 250.93842pt x 224.80014pt.
  [15pdfTeX warning (ext4): destination with the same identifier (name{figure.13
 }) has been already used, duplicate ignored
 
@@ -812,12 +812,12 @@ ine 424.
                                                   \fi \fi 
 l.427 
       ]
-File: img/comunidades/componente_gigante_sinsolapar.pdf Graphic file (type pdf)
+File: img/comunidades/componente_gigante_sinsolapar.png Graphic file (type png)
 
- <use img/comunidades/componente_gigante_sinsolapar.pdf>
-Package pdftex.def Info: img/comunidades/componente_gigante_sinsolapar.pdf used
+ <use img/comunidades/componente_gigante_sinsolapar.png>
+Package pdftex.def Info: img/comunidades/componente_gigante_sinsolapar.png used
  on input line 430.
-(pdftex.def)             Requested size: 250.93842pt x 239.32173pt.
+(pdftex.def)             Requested size: 250.93842pt x 239.4026pt.
  [16pdfTeX warning (ext4): destination with the same identifier (name{figure.14
 }) has been already used, duplicate ignored
 
@@ -830,20 +830,20 @@ l.440
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.440 
-       <./img/comunidades/comunidades_centro.pdf>]
-<img/comunidades/comunidad_casillas.pdf, id=298, 661.67201pt x 767.66798pt>
-File: img/comunidades/comunidad_casillas.pdf Graphic file (type pdf)
+       <./img/comunidades/comunidades_centro.png>]
+<img/comunidades/comunidad_casillas.png, id=274, 661.5114pt x 767.5074pt>
+File: img/comunidades/comunidad_casillas.png Graphic file (type png)
 
-<use img/comunidades/comunidad_casillas.pdf>
-Package pdftex.def Info: img/comunidades/comunidad_casillas.pdf used on input l
+<use img/comunidades/comunidad_casillas.png>
+Package pdftex.def Info: img/comunidades/comunidad_casillas.png used on input l
 ine 458.
-(pdftex.def)             Requested size: 200.75073pt x 232.9143pt.
+(pdftex.def)             Requested size: 200.75073pt x 232.91243pt.
 
-<img/comunidades/comunidad_ramos.pdf, id=299, 289.08pt x 597.432pt>
-File: img/comunidades/comunidad_ramos.pdf Graphic file (type pdf)
+<img/comunidades/comunidad_ramos.png, id=275, 289.08pt x 597.432pt>
+File: img/comunidades/comunidad_ramos.png Graphic file (type png)
 
-<use img/comunidades/comunidad_ramos.pdf>
-Package pdftex.def Info: img/comunidades/comunidad_ramos.pdf used on input line
+<use img/comunidades/comunidad_ramos.png>
+Package pdftex.def Info: img/comunidades/comunidad_ramos.png used on input line
  464.
 (pdftex.def)             Requested size: 140.52562pt x 260.98386pt.
  [17pdfTeX warning (ext4): destination with the same identifier (name{figure.16
@@ -852,22 +852,22 @@ Package pdftex.def Info: img/comunidades/comunidad_ramos.pdf used on input line
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.467 
-       <./img/comunidades/comunidad_casillas.pdf>]
-<img/comunidades/comunidad_naranja.pdf, id=312, 812.63597pt x 995.72pt>
-File: img/comunidades/comunidad_naranja.pdf Graphic file (type pdf)
+       <./img/comunidades/comunidad_casillas.png>]
+<img/comunidades/comunidad_naranja.png, id=285, 812.3148pt x 995.3988pt>
+File: img/comunidades/comunidad_naranja.png Graphic file (type png)
 
-<use img/comunidades/comunidad_naranja.pdf>
-Package pdftex.def Info: img/comunidades/comunidad_naranja.pdf used on input li
+<use img/comunidades/comunidad_naranja.png>
+Package pdftex.def Info: img/comunidades/comunidad_naranja.png used on input li
 ne 470.
-(pdftex.def)             Requested size: 140.52704pt x 200.75098pt.
+(pdftex.def)             Requested size: 140.52109pt x 200.74696pt.
 
-<img/comunidades/comunidad_barcelona.pdf, id=313, 957.17598pt x 750.00201pt>
-File: img/comunidades/comunidad_barcelona.pdf Graphic file (type pdf)
+<img/comunidades/comunidad_barcelona.png, id=286, 956.8548pt x 749.6808pt>
+File: img/comunidades/comunidad_barcelona.png Graphic file (type png)
 
-<use img/comunidades/comunidad_barcelona.pdf>
-Package pdftex.def Info: img/comunidades/comunidad_barcelona.pdf used on input 
+<use img/comunidades/comunidad_barcelona.png>
+Package pdftex.def Info: img/comunidades/comunidad_barcelona.png used on input 
 line 476.
-(pdftex.def)             Requested size: 200.74998pt x 200.74086pt.
+(pdftex.def)             Requested size: 200.74103pt x 200.7464pt.
  [18pdfTeX warning (ext4): destination with the same identifier (name{figure.17
 }) has been already used, duplicate ignored
 
@@ -880,13 +880,8 @@ l.479
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.479 
-       <./img/comunidades/comunidad_ramos.pdf> <./img/comunidades/comunidad_nar
-anja.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./img/comunidades/comunidad_
-naranja.pdf): PDF inclusion: multiple pdfs with page group included in a single
- page
->]
+       <./img/comunidades/comunidad_ramos.png> <./img/comunidades/comunidad_nar
+anja.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 480--483
 
  []
@@ -907,7 +902,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 486--491
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.491 
-       <./img/comunidades/comunidad_barcelona.pdf>]
+       <./img/comunidades/comunidad_barcelona.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 495--508
 
  []
@@ -971,10 +966,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on documentacion.pdf (21 pages, 2944987 bytes).
+Output written on documentacion.pdf (21 pages, 11408427 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 332 compressed objects within 4 object streams
+ 369 PDF objects out of 1000 (max. 8388607)
+ 297 compressed objects within 3 object streams
  68 named destinations out of 1000 (max. 500000)
  230 words of extra memory for PDF output out of 10000 (max. 10000000)
 
