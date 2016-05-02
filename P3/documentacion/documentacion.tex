@@ -175,6 +175,10 @@ En la pestaña de búsqueda se simplemente se incluye un mensaje que nos indica qu
 
 Como podemos ver en la figura \ref{fig:web}, es posible buscar cadenas de texto en el título o en el contenido de la noticia. Y al buscar, nos aparecerá el listado de noticias recuperadas por el sistema.
 
+\subsubsection{Como ejecutar}
+
+Para ejecutar la aplicación es necesario ejecutar el ejecutable "GIW-P3.jar". Hay que asegurarse de que junto al ejecutable se encuentra la carpeta "lib" que incluye las bibliotecas necesarias de Lucene, y la carpeta "public\_html" que contiene el fichero "index.html", que contiene el código HTML y JavaScript para la parte de la búsqueda en la web.
+
 
 \subsection{Desarrollo}
 
@@ -195,12 +199,16 @@ De forma que leerá el fichero XML, obteniendo el título y texto para indexarlo c
 
 Para la búsqueda de los documentos previamente indexados, como hemos visto en el manual de usuario, se ha desarrollado una aplicación web sencilla que nos permite realizar búsquedas sobre nuestro índice, ya sea por título o por contenido.
 \\\\
-Para hacer funcionar la web, se ha utilizado la clase "Webserver" de Java, de forma que muestra el fichero HTML correspondiente cuando se accede a la URL de la web. Y para hacer la búsqueda se han utilizado peticiones HTTP GET, realizadas con Angular\footnote{\url{https://angularjs.org}}.
+Para hacer funcionar la web, se ha utilizado la clase "Webserver" de Java, de forma que muestra el fichero HTML correspondiente cuando se accede a la URL de la web. Y para hacer la búsqueda se han utilizado peticiones HTTP GET (en la dirección http://localhost:8000/api/search), realizadas con Angular\footnote{\url{https://angularjs.org}}. De esta forma, lo que se ha hecho ha sido montar una API sencilla para recuperar los resultados de la búsqueda en formato JSON y después mostrarlos en la web.
+\\\\
+Para realizar la búsqueda con Lucene, se ha creado la clase "Searcher", que mediante los métodos "searchByTitle" y "searchByText", se encargan de preparar la llamada final a la función "search" que es la que contiene todas las llamadas necesarias a la librería Lucene. El código es similar al código de ejemplo que se proporciona en el guión, pero al igual que con el "Indexer" se utiliza el Analyzer español y la lista de palabras vacías para realizar la búsqueda sobre el índice.
+\\\\
+Entre la clase que se encarga de gestionar los eventos de las peticiones HTTP para la API de búsqueda y la clase "Searcher", se ha desarrollado una clase Singleton (SearcherController) que contiene un objeto Searcher para realizar las búsquedas. De esta forma evitamos tener varios objetos searcher innecesarios consumiendo recursos.
 
 
 \subsection*{Notas Finales sobre la Entrega}
 
-A
+Junto a esta documentación se incluye el código fuente Java y en la carpeta "dist" del proyecto se encuentra el ejecutable de la aplicación, las librerías en la carpeta "lib" y la parte web en la carpeta "public\_html". Para probar la aplicación se recomienda usar el contenido de la carpeta "dist", pero si se desea compilar el proyecto, será necesario incluir la carpeta "public\_html" junto al ejecutable generado. En caso de no hacerlo, no funcionará la web, y por tanto, no se podrán realizar búsquedas.
 
 
 \end{document}
