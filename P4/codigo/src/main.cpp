@@ -3,11 +3,23 @@
 #include <iostream>
 #include <cassert>
 
+#include <stdio.h>      /* printf, scanf, puts, NULL */
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>       /* time */
+
 #include "Ratings.h"
 #include "Movies.h"
 
+int random(int lower, int upper)
+{
+    return rand() % upper + lower;
+}
+
 int main(int argc, char **argv)
 {
+
+    // initialize random seed:
+    srand (time(NULL));
 
     Ratings myRatings;
 
@@ -20,5 +32,18 @@ int main(int argc, char **argv)
     movies.readFile("./data/u.item");
     std::cout << "Movie 3: "  << movies.getMovie(3) << std::endl;
     std::cout << "Readed movies: "  << movies.getMovies() << std::endl;
+
+    // ratings for the user
+    std::map<int, int> userRatings;
+    for(int i=0;i<20;i++)
+    {
+        int r = random(1, movies.getMovies()); // get random movie to request rating
+        int rating = 0;
+        do{
+            std::cout << "Que calificación le das a la película: " << movies.getMovie(r) << " ";
+            std::cin >> rating;
+        }while( rating > 5 || rating < 0 );
+        userRatings[r] = rating; // save rating
+    }
 
 }
