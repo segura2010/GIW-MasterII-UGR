@@ -47,4 +47,6 @@ int main(int argc, char **argv)
         userRatings[r] = rating; // save rating
     }
 
+    myRatings.getPearsonNearestUsers(userRatings, 3);
+
 }

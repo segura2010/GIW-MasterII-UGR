@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <math.h>
 
 #include <vector>
 #include <map>
@@ -92,6 +93,54 @@ public:
     int getMovies()
     {
         return numMovies;
+    }
+
+    /*
+        it receives user ratings for movies and returns the K nearest users
+    */
+    std::map<int, std::map<int, int> > getPearsonNearestUsers(std::map<int, int> userRatings, int k)
+    {
+        std::map<int, std::map<int, int> > nearestUsers;
+
+        std::map<int, std::map<int, int> >::iterator userit;
+        std::map<int, int>::iterator it;
+
+        // first: calculate user average
+        double userAvg = 0.0;
+        for(it=userRatings.begin();it!=userRatings.end();it++)
+        {
+            userAvg += it->second;
+        }
+        userAvg = userAvg / userRatings.size();
+
+        for(userit=ratings.begin();userit!=ratings.end();userit++)
+        {
+            double similitude = 0.0;
+            double numerator = 0.0;
+            double otherUserDenominator = 0.0, userDenominator = 0.0;
+            for(it=userRatings.begin();it!=userRatings.end();it++)
+            {
+                int movieid = it->first;
+                int actUserRating = it->second;
+                int actOtherUserRating = userit->second[movieid];
+                double otherUserAvg = average[userit->first];
+
+                numerator = numerator + ( (actOtherUserRating-otherUserAvg)*(actUserRating-userAvg) );
+                otherUserDenominator = otherUserDenominator + ( (actOtherUserRating-otherUserAvg)*(actOtherUserRating-otherUserAvg) );
+                userDenominator = userDenominator + ( (actUserRating-userAvg)*(actUserRating-userAvg) );
+            }
+
+            otherUserDenominator = sqrt(otherUserDenominator);
+            userDenominator = sqrt(userDenominator);
+
+            similitude = numerator / ( otherUserDenominator*userDenominator );
+            //std::cout << "USERID: " << userit->first << ": " << similitude << std::endl;
+            // Not finished!!
+            // now, we must sort results, for example using a priority queue with our own functor
+            // http://www.cplusplus.com/reference/queue/priority_queue/priority_queue/
+        }
+
+        return nearestUsers;
     }
 
 };
