@@ -15,6 +15,7 @@ class Ratings
 
 private:
     std::map<int, std::map<int, int> > ratings;
+    std::map<int, double> average; // rating average for each user
     int numUsers, numMovies;
 
 public:
@@ -51,20 +52,36 @@ public:
             {   // if user exists put movie with rating
                 (userit->second)[movieid] = rating;
                 numMovies++;
+                average[userid] = (double)average[userid] + (double)rating; // add rating to the average
             }
             else
             {   // if not, add a new user with his rating
                 ratings[userid] = std::map<int, int>();
                 ratings[userid][movieid] = rating;
                 numUsers++; numMovies++;
+                average[userid] = (double)rating; // initilize average
             }
 
+
         }while(!file.eof());
+
+        // Calculate average
+        std::map<int, double>::iterator it;
+        for(it=average.begin();it!=average.end();it++)
+        {
+            it->second = (double)it->second / (double)ratings[it->first].size();
+        }
+
 	}
 
     int getRating(int uid, int mid)
     {
         return ratings[uid][mid];
+    }
+
+    double getUserAverage(int uid)
+    {
+        return average[uid];
     }
 
     int getUsers()

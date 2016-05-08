@@ -26,6 +26,7 @@ int main(int argc, char **argv)
     myRatings.readFile("./data/ua.base");
 
     std::cout << "Rating for user 1 movie 10: " << myRatings.getRating(1, 10) << std::endl;
+    std::cout << "Average for user 1 movie: " << myRatings.getUserAverage(1) << std::endl;
     std::cout << "Readed users&movies: " << myRatings.getUsers() << " : " << myRatings.getMovies() << std::endl;
 
     Movies movies;
