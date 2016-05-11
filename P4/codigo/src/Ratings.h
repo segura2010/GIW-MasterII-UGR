@@ -160,8 +160,14 @@ public:
 
             otherUserDenominator = sqrt(otherUserDenominator);
             userDenominator = sqrt(userDenominator);
-
-            similitude = numerator / ( otherUserDenominator*userDenominator );
+            if(userDenominator == 0.0 || otherUserDenominator == 0.0)
+            {   // occurs when all ratings are equal.. userDenominator = 0, so denominator = 0..
+                similitude = 0.0;
+            }
+            else
+            {
+                similitude = numerator / ( otherUserDenominator*userDenominator );
+            }
             //std::cout << "USERID: " << userit->first << ": " << similitude << std::endl;
 
             // now, we must sort results, for example using a priority queue with our own functor
@@ -190,27 +196,34 @@ public:
     */
     std::priority_queue< std::pair<int, double>, std::vector< std::pair<int, double> >, RatingFunctor > getUserRecomendations(const std::map<int, int>& userRatings, std::map<int, double>& nearestUsers, Movies& movies)
     {
-        /* TODO:
-            Check if is not watched!!
-            Check if users watched movie!!
-        */
         std::priority_queue< std::pair<int, double>, std::vector< std::pair<int, double> >, RatingFunctor > predictedRatings;
 
-        double predictedRating = 0.0;
+        double predictedRating = 0.0, normalizedSum = 0.0;
 
         std::map<int, std::string>::iterator moviesIt;
         std::map<int, double>::iterator usersIt;
         for(moviesIt=movies.begin();moviesIt!=movies.end();moviesIt++)
         {
-            predictedRating = 0.0;
-            for(usersIt=nearestUsers.begin();usersIt!=nearestUsers.end();usersIt++)
-            {
-                int movieRatingByUser = ratings[usersIt->first][moviesIt->first];
-                predictedRating = predictedRating + ( movieRatingByUser*usersIt->second );
-            }
-            predictedRating = predictedRating / nearestUsers.size();
+            if( userRatings.find(moviesIt->first) == userRatings.end() )
+            {   // if not watched, calculate rating
+                predictedRating = 0.0;
+                for(usersIt=nearestUsers.begin();usersIt!=nearestUsers.end();usersIt++)
+                {
+                    int movieRatingByUser = ratings[usersIt->first][moviesIt->first];
+                    predictedRating = predictedRating + ( movieRatingByUser*usersIt->second );
+                    normalizedSum += usersIt->second;
+                }
+                if( normalizedSum == 0 )
+                {
+                    predictedRating = 0.0;
+                }
+                else
+                {
+                    predictedRating = predictedRating / normalizedSum;
+                }
 
-            predictedRatings.push( std::pair<int, double>(moviesIt->first, predictedRating) );
+                predictedRatings.push( std::pair<int, double>(moviesIt->first, predictedRating) );
+            }
         }
 
         return predictedRatings;
