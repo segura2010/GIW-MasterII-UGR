@@ -1,4 +1,7 @@
 
+#ifndef MOVIES_H
+#define MOVIES_H
+
 
 // To read files
 #include <fstream>
@@ -64,4 +67,16 @@ public:
         return numMovies;
     }
 
+    std::map<int, std::string>::iterator begin()
+    {
+        return movies.begin();
+    }
+
+    std::map<int, std::string>::iterator end()
+    {
+        return movies.end();
+    }
+
 };
+
+#endif

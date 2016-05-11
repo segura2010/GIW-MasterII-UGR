@@ -1,4 +1,6 @@
 
+#ifndef RATINGS_H
+#define RATINGS_H
 
 // To read files
 #include <fstream>
@@ -10,6 +12,8 @@
 #include <vector>
 #include <map>
 #include <queue>
+
+#include "Movies.h"
 
 
 // Functor for PriorityQueue
@@ -119,9 +123,9 @@ public:
     /*
         it receives user ratings for movies and returns the K nearest users
     */
-    std::map<int, std::map<int, int> > getPearsonNearestUsers(std::map<int, int> userRatings, int k)
+    std::map<int, double > getPearsonNearestUsers(std::map<int, int> userRatings, int k)
     {
-        std::map<int, std::map<int, int> > nearestUsers;
+        std::map<int, double > nearestUsers;
 
         std::map<int, std::map<int, int> >::iterator userit;
         std::map<int, int>::iterator it;
@@ -170,7 +174,7 @@ public:
         while( !pq.empty() && i<k )
         {
             std::pair<int, double> act = pq.top(); pq.pop();
-            nearestUsers[act.first] = ratings[act.first]; // save user for the output
+            nearestUsers[act.first] = act.second; // save user for the output
             i++;
 
             //std::cout << "USERID: " << act.first << ": " << act.second << std::endl;
@@ -180,4 +184,38 @@ public:
         return nearestUsers;
     }
 
+    /*
+        it receives K nearest neightbours, user ratings and movies
+        then it calculates rating's predictions for not watched movies and returns them
+    */
+    std::priority_queue< std::pair<int, double>, std::vector< std::pair<int, double> >, RatingFunctor > getUserRecomendations(const std::map<int, int>& userRatings, std::map<int, double>& nearestUsers, Movies& movies)
+    {
+        /* TODO:
+            Check if is not watched!!
+            Check if users watched movie!!
+        */
+        std::priority_queue< std::pair<int, double>, std::vector< std::pair<int, double> >, RatingFunctor > predictedRatings;
+
+        double predictedRating = 0.0;
+
+        std::map<int, std::string>::iterator moviesIt;
+        std::map<int, double>::iterator usersIt;
+        for(moviesIt=movies.begin();moviesIt!=movies.end();moviesIt++)
+        {
+            predictedRating = 0.0;
+            for(usersIt=nearestUsers.begin();usersIt!=nearestUsers.end();usersIt++)
+            {
+                int movieRatingByUser = ratings[usersIt->first][moviesIt->first];
+                predictedRating = predictedRating + ( movieRatingByUser*usersIt->second );
+            }
+            predictedRating = predictedRating / nearestUsers.size();
+
+            predictedRatings.push( std::pair<int, double>(moviesIt->first, predictedRating) );
+        }
+
+        return predictedRatings;
+    }
+
 };
+
+#endif

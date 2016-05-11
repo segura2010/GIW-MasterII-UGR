@@ -47,8 +47,13 @@ int main(int argc, char **argv)
         userRatings[r] = rating; // save rating
     }
 
-    std::map<int, std::map<int, int> > nearestUsers;
+    std::map<int, double > nearestUsers;
     nearestUsers = myRatings.getPearsonNearestUsers(userRatings, 3);
     std::cout << "Nearest: " << nearestUsers.size() << std::endl;
+
+    std::priority_queue< std::pair<int, double>, std::vector< std::pair<int, double> >, RatingFunctor > recomendations;
+    recomendations = myRatings.getUserRecomendations(userRatings, nearestUsers, movies);
+
+    std::cout << "Best: " << recomendations.top().first << "(" << recomendations.top().second << ")" << std::endl;
 
 }
