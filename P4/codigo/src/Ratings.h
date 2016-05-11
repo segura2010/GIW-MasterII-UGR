@@ -194,7 +194,7 @@ public:
         it receives K nearest neightbours, user ratings and movies
         then it calculates rating's predictions for not watched movies and returns them
     */
-    std::priority_queue< std::pair<int, double>, std::vector< std::pair<int, double> >, RatingFunctor > getUserRecomendations(const std::map<int, int>& userRatings, std::map<int, double>& nearestUsers, Movies& movies)
+    std::priority_queue< std::pair<int, double>, std::vector< std::pair<int, double> >, RatingFunctor > getUserRecommendations(const std::map<int, int>& userRatings, std::map<int, double>& nearestUsers, Movies& movies)
     {
         std::priority_queue< std::pair<int, double>, std::vector< std::pair<int, double> >, RatingFunctor > predictedRatings;
 
