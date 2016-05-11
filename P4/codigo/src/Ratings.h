@@ -9,6 +9,27 @@
 
 #include <vector>
 #include <map>
+#include <queue>
+
+
+// Functor for PriorityQueue
+class RatingFunctor
+{
+    bool reverse;
+    public:
+    RatingFunctor(const bool& revparam=false)
+    {
+        reverse=revparam;
+    }
+    bool operator() (const std::pair<int, double>& lhs, const std::pair<int, double>&rhs) const
+    {
+        if (reverse)
+            return (lhs.second > rhs.second);
+        else
+            return (lhs.second < rhs.second);
+    }
+};
+
 
 
 class Ratings
@@ -105,6 +126,9 @@ public:
         std::map<int, std::map<int, int> >::iterator userit;
         std::map<int, int>::iterator it;
 
+        // PAIR IDUSER and SIMILITUDE, using vector as internal rep and my functor to sort
+        std::priority_queue< std::pair<int, double>, std::vector< std::pair<int, double> >, RatingFunctor > pq;
+
         // first: calculate user average
         double userAvg = 0.0;
         for(it=userRatings.begin();it!=userRatings.end();it++)
@@ -135,10 +159,23 @@ public:
 
             similitude = numerator / ( otherUserDenominator*userDenominator );
             //std::cout << "USERID: " << userit->first << ": " << similitude << std::endl;
-            // Not finished!!
+
             // now, we must sort results, for example using a priority queue with our own functor
             // http://www.cplusplus.com/reference/queue/priority_queue/priority_queue/
+            pq.push( std::pair<int, double>(userit->first, similitude) );
         }
+
+        // prepare output
+        int i = 0;
+        while( !pq.empty() && i<k )
+        {
+            std::pair<int, double> act = pq.top(); pq.pop();
+            nearestUsers[act.first] = ratings[act.first]; // save user for the output
+            i++;
+
+            //std::cout << "USERID: " << act.first << ": " << act.second << std::endl;
+        }
+
 
         return nearestUsers;
     }

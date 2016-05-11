@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 
     // ratings for the user
     std::map<int, int> userRatings;
-    for(int i=0;i<20;i++)
+    for(int i=0;i<5;i++)
     {
         int r = random(1, movies.getMovies()); // get random movie to request rating
         int rating = 0;
@@ -47,6 +47,8 @@ int main(int argc, char **argv)
         userRatings[r] = rating; // save rating
     }
 
-    myRatings.getPearsonNearestUsers(userRatings, 3);
+    std::map<int, std::map<int, int> > nearestUsers;
+    nearestUsers = myRatings.getPearsonNearestUsers(userRatings, 3);
+    std::cout << "Nearest: " << nearestUsers.size() << std::endl;
 
 }
