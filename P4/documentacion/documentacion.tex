@@ -1,0 +1,160 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Programming/Coding Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Ted Pavlic (http://www.tedpavlic.com)
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+%
+% This template uses a Perl script as an example snippet of code, most other
+% languages are also usable. Configure them in the "CODE INCLUSION 
+% CONFIGURATION" section.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage[usenames,dvipsnames]{color} % Required for custom colors
+\usepackage{graphicx} % Required to insert images
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{hyperref} % Hyperlink
+\usepackage{enumitem}
+
+\usepackage{float} % imagenes debajo de texto (http://tex.stackexchange.com/questions/85971/figure-goes-automatically-to-next-page)
+
+\usepackage{color} % texto de colores
+
+
+\usepackage[utf8]{inputenc} % Para tildes!
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1} % Line spacing
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName} % Top left header
+\rhead{\hmwkTitle} % Top center head
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Página\ \thepage\ de\ \protect\pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT STRUCTURE COMMANDS
+%	Skip this unless you know what you're doing
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CLASS SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\hmwkTitle}{Gestión de Información en la Web} % Assignment title
+\newcommand{\hmwkSubtitulo}{Master en Ingeniería Informática} % Due date
+\newcommand{\hmwkDueDate}{Jueves 9 de Junio de 2016} % Due date
+\newcommand{\hmwkTituloTarea}{Práctica 4: Desarrollo de un Sistema de Recomendación basado en Filtrado Colaborativo} % Class/lecture time
+\newcommand{\hmwkAuthorName}{Luis Alberto Segura Delgado} % Your name
+\newcommand{\hmwkAuthorEmail}{segura2010@correo.ugr.es} % Your email
+\newcommand{\hmwkAuthorDNI}{45922174-Y} % Your email
+
+\renewcommand{\figurename}{Figura}
+\renewcommand{\contentsname}{Índice}
+\renewcommand{\tablename}{Tabla}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{
+\vspace{2in}
+\textmd{\textbf{\hmwkTitle}}\\
+\textmd{\textbf{\hmwkSubtitulo}}\\
+\normalsize\textbf{\\\hmwkTituloTarea}\\
+\vspace{0.1in}
+\vspace{3in}
+}
+
+\author{\textbf{\hmwkAuthorName} \\
+	\textbf{DNI}: \hmwkAuthorDNI \\
+	\texttt{\hmwkAuthorEmail}
+}
+\date{\hmwkDueDate} % Insert date here if you want it to appear below your name
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\inputencoding{latin1}
+\maketitle
+
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+% To have just one problem per page, simply put a \clearpage after each problem
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introducción}
+
+El objetivo de esta práctica es comprender el proceso de recomendación basado en filtrado colaborativo, y una vez hecho esto, llevarlo a la práctica y desarrollar nuestro propio sistema de recomendación basado en filtrado colaborativo. Para ello, se ha utilizado la colección de \textbf{MovieLens}.
+
+
+\section{Trabajo Realizado}
+
+Se ha desarrollado un sistema de recomendación basado en filtrado colaborativo sencillo. Se ha desarrollado en C++ de forma que sea lo más eficiente posible a la hora de trabajar con un conjunto de datos relativamente grande.
+
+\subsection{Detalles de Implementación}
+
+En el fichero \textit{main.cpp}, podemos encontrar la funcionalidad básica de nuestro sistema. En el se puede ver como creamos los objetos de las clases \textbf{Movies} y \textbf{Ratings}. Que nos sirven para hacer los cálculos principales y las lecturas de los datos, como veremos más adelante. Este fichero también contiene la parte de "interfaz de usuario", que básicamente consiste en una interfaz a través de la consola que solicita al usuario que evalúe 20 películas escogidas al azar con una calificación entre 0 y 5. Una vez evaluadas, llamará a las funciones que correspondan para obtener los usuarios más parecidos al usuario actual y las películas recomendadas a partir de estos usuarios.
+\\\\
+Para la clase \textbf{Movies} podemos ver su implementación en el fichero \textit{Movies.h}. Como podemos ver, esta clase simplemente nos sirve para leer el fichero que contiene la información de las películas y almacenar, para cada película su identificador y su nombre (que son los datos que nos hacen falta). Para almacenar las películas, podemos ver que utilizamos un "Map", lo que nos permite acceder de forma rápida al nombre de una película a partir de su identificador. Además, de esta forma evitamos hacer suposiciones de que tenemos identificadores "seguidos", que tendríamos que hacer si simplemente utilizásemos un vector y el índice del mismo como identificador de la película.
+\\\\
+Para la clase \textbf{Ratings} podemos ver su implementación en el fichero \textit{Ratings.h}. Esta clase nos sirve para leer el fichero con las puntuaciones de cada usuario a cada película, y para almacenar dicha información. Además, para simplificar el uso, también se encarga de calcular la similitud entre los usuarios y un usuario dado (ver función \textit{getPearsonNearestUsers}). Para hacer el cálculo de la similitud, se utiliza el algoritmo del vecino más cercano visto en clase y el coeficiente de Pearson como función de similitud. Los usuarios se van almacenando en una cola con prioridad, de forma que permanecen ordenados y después solo hace falta ir sacando de la cola los usuario y devolver los K más cercanos.
+\\\\
+Una vez que tenemos los usuario más cercanos, podemos utilizarlos con la función \textit{getUserRecommendations} para obtener las recomendaciones más apropiadas para el usuario actual. Al igual que en el cálculo de la similitud, en este caso se realiza el cálculo de la valoración que daría el usuario a las película en base a la valoración que han realizado los usuarios más parecidos. Cada película y la valoración predicha, se almacenan en una cola con prioridad, de forma que quedan ordenadas en función de la valoración predicha.
+
+
+\subsection{Manual de Usuario}
+
+La utilización del software desarrollado es sencilla. Simplemente se debe compilar el software haciendo uso del Makefile proporcionado. El ejecutable se generará en la carpeta \textbf{bin}. Para ejecutarlo, será necesario pasar como parámetros los ficheros en los que se encuentran las valoraciones de MovieLens y la información de las películas. Un ejemplo de uso sería el siguiente:
+\\\\
+./p4 ./data/ua.base ./data/u.item
+\\\\
+Siendo el primer parámetro (./data/ua.base) el fichero en el que se encuentran las valoraciones que todos los usuarios han dado a todas las películas, y el segundo parámetro (./data/u.item) el fichero donde se encuentra la información de las películas.
+\\\\
+Una vez ejecutado, el software preguntará que calificación da el usuario a 20 películas al azar. Y una vez valoradas esas 20 películas, el sistema realizará todos los cálculos y proporcionará una lista de 10 películas recomendadas junto con la valoración predicha para dicha película. Si se desea que aparezcan más películas recomendadas, se puede modificar el valor de la variable \textbf{maxRecommendations} en fichero \textit{main.cpp}.
+
+
+\end{document}
