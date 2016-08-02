@@ -55,7 +55,7 @@ int main(int argc, char **argv)
     }
 
     std::map<int, double > nearestUsers;
-    nearestUsers = myRatings.getPearsonNearestUsers(userRatings, 3);
+    nearestUsers = myRatings.getPearsonNearestUsers(userRatings, 10);
 
     std::priority_queue< std::pair<int, double>, std::vector< std::pair<int, double> >, RatingFunctor > recommendations;
     recommendations = myRatings.getUserRecommendations(userRatings, nearestUsers, movies);
@@ -64,7 +64,7 @@ int main(int argc, char **argv)
     std::cout << "============================" << std::endl;
     std::cout << "Recommedations: " << std::endl;
     std::cout << "============================" << std::endl;
-    int maxRecommendations = 10, movieid = 0;
+    int maxRecommendations = 150, movieid = 0;
     double rating = 0.0;
     std::string movieName;
     for(int i=0;i<maxRecommendations && !recommendations.empty();i++)
